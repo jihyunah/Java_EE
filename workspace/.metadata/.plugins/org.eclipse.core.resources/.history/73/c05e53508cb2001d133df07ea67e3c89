@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#nameDiv {
+	font-size: 8pt;
+	color: red;
+	font-weight: bold;
+}
+
+#ageDiv{
+	font-size: 8pt;
+	color: red;
+	font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+<form name="personForm" method="get" action="https://www.naver.com">
+
+<table border="1" cellpadding="5" cellspacing="0">
+
+	<tr>
+		<td width="70" align="center"> 이름 </td>
+		<td>
+			<input type="text" name="name" placeholder="이름 입력 ">
+			<div id="nameDiv"></div>
+		</td>
+	
+	</tr>
+	
+	<tr>
+		<td width="70"> 성별  </td>
+		<td>
+			<fieldset>
+				<input type="radio" id="남자 " name="gender" value="0"> 남자 
+ 			 	<input type="radio" id="여자 " name="gender" value="1">여자 
+ 			 </fieldset>
+			<div id="genderDiv"></div>
+		</td>
+	</tr>
+	
+	<tr>
+	
+		<td align="center"> 색깔  </td>
+		<td valgn="">
+		<select name="color">
+			<option value="red">빨강 </option>
+			<option value="green">초록 </option>
+			<option value="blue">파랑 </option>
+			<option value="magenta">자홍  </option>
+			<option value="cyan">옥색 </option>
+		</select>
+			<div id="colorDiv"></div>
+		</td>
+	
+	</tr>
+	
+	<tr>
+	
+		<td align="center"> 취미  </td>
+		<td>
+			<input type="checkbox" name="hobby" value="book" checked>독서 
+			<input type="checkbox" name="hobby" value="movie">영화 
+			<input type="checkbox" name="hobby" value="music">음악 
+			<input type="checkbox" name="hobby" value="game">게임 
+			<input type="checkbox" name="hobby" value="shopping">쇼핑 
+			<div id="hobbyDiv"></div>
+		</td>
+	
+	</tr>
+	
+	<tr>
+	
+		<td align="center"> 과목  </td>
+		<td valgn="">
+		<select name="subject" size="4">
+			<option value="java"selected> java </option>
+			<option value="html">html </option>
+			<option value="css">css </option>
+			<option value="python">python </option>
+		</select>
+			<div id="subjectDiv"></div>
+		</td>
+	
+	</tr>
+
+	<tr>
+		<td colspan="2" align="center"> 
+			<input type="button" value="" onclick="javascript:check()">
+			<input type="reset" value="취소 "></td>
+			<div id="nameDiv"></div>
+		</td>
+	
+	</tr>
+
+</table>
+
+</form>
+<script type="text/javascript"> 
+
+		function check(){
+			if(document.paramForm.name.value=="") document.getElementById("nameDiv").innerText = "이름 입력 ";
+			else if(document.paramForm.gender.value=="") document.getElementById("genderDiv").innerText = "성별 선택  ";
+			else if(document.paramForm.color.value=="") document.getElementById("colorDiv").innerText = "색깔 선택  ";
+			else if(document.paramForm.hobby.value=="") document.getElementById("hobbyDiv").innerText = "성별 선택  ";
+			else if(document.paramForm.gender.value=="") document.getElementById("genderDiv").innerText = "성별 선택  ";
+			else document.paramForm.submit();
+		}
+			
+</script>
+			
+			
+		}
+
+</body>
+</html>

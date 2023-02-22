@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+
+</style>
+</head>
+<body>
+<form name="personForm" method="get" action="https://www.naver.com">
+
+<table border="1" cellpadding="10" cellspacing="0">
+
+	<tr>
+		<td width="70" align="center"> 이름 </td>
+		<td>
+			<input type="text" name="name" placeholder="이름 입력 ">
+			<div id="nameDiv"></div>
+		</td>
+	
+	</tr>
+	
+	<tr>
+		<td align="center"> 성별  </td>
+		<td>
+			<input type="radio" id="남자 " name="gender" value="0">
+ 			 <label for="male">남자 </label>
+ 			 <input type="radio" id="여자 " name="gender" value="1">
+ 			 <label for="female">여자 </label>
+			<div id="genderDiv"></div>
+		</td>
+	</tr>
+	
+	<tr>
+	
+		<td align="center"> 색깔  </td>
+		<td valgn="">
+		<select name="color" size="4">
+			<option value="red">빨강 </option>
+			<option value="green">초록 </option>
+			<option value="blue">파랑 </option>
+			<option value="magenta">자 </option>
+			<option value="cyan">옥색 </option>
+		</select>
+			<div id="colorDiv"></div>
+		</td>
+	
+	</tr>
+	
+	<tr>
+	
+		<td align="center"> 취미  </td>
+		<td>
+			<input type="checkbox" name="hobby" value="book" checked>독서 
+			<input type="checkbox" name="hobby" value="movie">영화 
+			<input type="checkbox" name="hobby" value="music">음악 
+			<input type="checkbox" name="hobby" value="game">게임 
+			<input type="checkbox" name="hobby" value="shopping">쇼핑 
+			<div id="colorDiv"></div>
+		</td>
+	
+	</tr>
+	
+	<tr>
+	
+		<td align="center"> 과목  </td>
+		<td>
+			<input type="checkbox" name="hobby" value="book" checked>독서 
+			<input type="checkbox" name="hobby" value="movie">영화 
+			<input type="checkbox" name="hobby" value="music">음악 
+			<input type="checkbox" name="hobby" value="game">게임 
+			<input type="checkbox" name="hobby" value="shopping">쇼핑 
+			<div id="colorDiv"></div>
+		</td>
+	
+	</tr>
+
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+
+</form>
+
+</body>
+</html>
