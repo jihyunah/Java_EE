@@ -37,7 +37,7 @@
 </style>
 </head>
 <body>
-<form name="personForm" method="get" action="https://www.naver.com">
+<form name="personForm" method="get" action="http://localhost:8080/testServlet2/PersonServlet">
 
 <table border="1" cellpadding="5" cellspacing="0">
 
@@ -87,7 +87,7 @@
 	
 		<th width="70"> 취미  </th>
 		<td>
-			<input type="checkbox" name="hobby" value="book" checked>
+			<input type="checkbox" name="hobby" value="book" >
 			<label for="book">독서 </label>
 			
 			<input type="checkbox" name="hobby" value="movie">
@@ -124,8 +124,9 @@
 
 	<tr>
 		<td colspan="2" align="center"> 
-			<input type="button" value="제출 " onclick="javascript:check()">
-			<input type="reset" value="초기화  "></td>
+			<input type="button" value="SEND " onclick="check()">
+			<input type="reset" value="CANCEL">
+		</td>
 
 	
 	</tr>
@@ -144,11 +145,19 @@
 			document.getElementById("subjectDiv").innerText = "";
 			
 			if(document.personForm.name.value=="") document.getElementById("nameDiv").innerText = "이름 입력 ";
-			/* else if(document.personForm.gender.value=="") document.getElementById("genderDiv").innerText = "성별 선택  "; */
-			/* else if(document.personForm.color.value=="") document.getElementById("colorDiv").innerText = "색깔 선택  "; */
-			else if(document.personForm.hobby.value=="") document.getElementById("hobbyDiv").innerText = "취미 선택  ";
-			/* else if(document.personForm.subject.value=="") document.getElementById("subjectDiv").innerText = "과목 선택  "; */
-			else document.personForm.submit();
+			
+			//name="hobby"를 가진 애들 전체 
+			var check = document.getElementsByName("hobby");
+			var count = 0;
+			for(i=0; i<check.length; i++){
+				if(check[i].checked) count++;
+			}
+			if(count==0) {
+				alert("취미를 선택 ")
+				return;
+			}
+			
+			document.personForm.submit();
 		}
 			
 </script>
