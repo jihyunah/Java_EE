@@ -4,14 +4,14 @@
   
   
   
-  <servlet> <!-- servlet 등록하는 과정. 이걸 @ 어노테이션으로 대체 가능하다. -->
-  	<servlet-name>PersonServlet</servlet-name> <!-- 이름 기니까 간단한 이름 정해주는 것  -->
-  	<servlet-class>com.person.PersonServlet</servlet-class>  <!-- 내 클래스는 이거야. -->
+  <!-- <servlet> servlet 등록하는 과정. 이걸 @ 어노테이션으로 대체 가능하다.
+  	<servlet-name>PersonServlet</servlet-name> 이름 기니까 간단한 이름 정해주는 것 
+  	<servlet-class>com.person.PersonServlet</servlet-class>  내 클래스는 이거야.
   </servlet>
   <servlet-mapping>
   	<servlet-name>PersonServlet</servlet-name>
   	<url-pattern>/PersonServlet</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   
   
   
