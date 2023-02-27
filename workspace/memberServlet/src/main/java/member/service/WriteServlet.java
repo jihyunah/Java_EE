@@ -19,7 +19,7 @@ public class WriteServlet extends HttpServlet {
        
    
    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-      request.setCharacterEncoding("UTF-8");
+      request.setCharacterEncoding("UTF-8");//post인 경우 해줘야함. 
       //데이터
       
       String name = request.getParameter("name");//이름 속성을 얻어온다. 
