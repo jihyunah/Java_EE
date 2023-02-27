@@ -98,13 +98,13 @@ div{
 <tr>
 	<th>주소 </th>
 	<td>
-	<input type="text" name="zipcode" size="5" readonly> <!-- 직접 입력 못함  -->
-	<input type="button" value="우편번호검색" onclick="">
+	<input type="text" name="zipcode" id="zipcode" size="5" readonly> <!-- 직접 입력 못함  -->
+	<input type="button" value="우편번호검색" onclick="execDaumPostcode()">
 	<br>
-	<input type="text" name="addr1" style="width:400px;" placeholder="주소" readonly/>
+	<input type="text" name="addr1" id="addr1" style="width:400px;" placeholder="주소" readonly/>
 	<div id="addr1Div"></div>
 	
-	<input type="text" name="addr2" style="width:400px;" placeholder="상세주소" />
+	<input type="text" name="addr2" id="addr2" style="width:400px;" placeholder="상세주소" />
 	<div id="addr2Div"></div> 
 	</td>
 </tr>
@@ -132,7 +132,7 @@ div{
 </form>
 <!-- 절대 주소  -->
 <!-- <script type="text/javascript" src="http://localhost:8080/memberServlet/js/member.js"> -->
-
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script type="text/javascript" src="../js/member.js"> <!-- 상대주소 -->
 
 </script>
