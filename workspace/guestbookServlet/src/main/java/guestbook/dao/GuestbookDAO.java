@@ -119,6 +119,34 @@ public class GuestbookDAO {
 			   
 			   return "글이 작성되었습니다.";
 		   }
+
+		public GuestbookDTO guestbookSearch(GuestbookDTO guestbookDTO) {
+			GuestbookDTO selectGuestbookDTO = new GuestbookDTO();
+			
+			String sql = "select name, email, homepage, subject, content, logtime from guestbook where seq=?";
+			getConnection();
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setInt(1, guestbookDTO.getSeq());
+				rs = pstmt.executeQuery();
+				
+				while(rs.next()) {
+					
+					selectGuestbookDTO.setName(rs.getString("name"));
+					selectGuestbookDTO.setEmail(rs.getString("email"));
+					selectGuestbookDTO.setHomepage(rs.getString("homepage"));
+					selectGuestbookDTO.setContent(rs.getString("content"));
+					selectGuestbookDTO.setLogtime(rs.getString("logtime"));
+				}
+					
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} finally {
+				GuestbookDAO.close(conn, pstmt, rs);
+			}
+			return selectGuestbookDTO;
+		}
 	   
 	   
 	   
