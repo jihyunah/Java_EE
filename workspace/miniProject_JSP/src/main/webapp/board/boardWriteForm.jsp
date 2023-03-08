@@ -23,7 +23,7 @@
 <img src="../image/1.png" width="50" height="50" alt="찰칵" 
 onclick="location.href='../index.jsp'" style="cursor:pointer";>글쓰기 
 </h3>
-<form name="boardWriteForm" method="post" action="location.href='../index.jsp'">
+<form name="boardWriteForm" method="post" action="boardWrite.jsp">
 
 		<table border="1" cellpadding="5" cellspacing="0">
 			<tr>
@@ -58,7 +58,7 @@ onclick="location.href='../index.jsp'" style="cursor:pointer";>글쓰기
 		
 		if(document.getElementById("subject").value == "") {
 			document.getElementById("subjectDiv").innerText = "제목을 입력하세요";
-			document.boardWriteForm.subject.focus();
+			document.getElementById("subject").focus();
 	}
 		else if(document.getElementById("content").value == "") {
 			document.getElementById("contentDiv").innerText = "내용을 입력";

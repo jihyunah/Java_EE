@@ -3,7 +3,7 @@ package member.bean;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter 
+@Getter
 @Setter
 public class MemberDTO {
 	private String name;
@@ -18,6 +18,5 @@ public class MemberDTO {
 	private String zipcode;
 	private String addr1;
 	private String addr2;
-	
-	
+
 }
