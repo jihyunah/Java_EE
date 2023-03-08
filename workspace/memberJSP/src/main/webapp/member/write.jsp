@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" %>
     
 <%@ page import="member.bean.MemberDTO" %>
 <%@ page import="member.dao.MemberDAO" %>
@@ -54,7 +54,7 @@
 else {
 %>
 <h3>회원가입 성공 </h3>
-<input type='button' value='로그인' onclick=''>
+<input type='button' value='로그인' onclick=location.href='loginForm.jsp'>
 <%} %>
 
 </body>
