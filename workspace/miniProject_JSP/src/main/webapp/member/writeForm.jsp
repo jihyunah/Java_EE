@@ -28,6 +28,7 @@ div{
 				<th>아이디</th>
 				<td>
 					<input type="text" name="id" id="id" size="30"  placeholder="아이디 입력">
+					<input type="button" value="중복체크" onclick="checkId()">
 					<div id="idDiv"></div>
 				</td>
 			</tr>
@@ -118,5 +119,27 @@ div{
 <!-- 절대주소 -->
 /* <script type="text/javascript" src="http://localhost:8080/memberServlet/js/member.js"> */
 </script>
+<script type="Text/javascript">
+function checkId(){
+	//script 자료형 var
+	var id = document.getElementById("id").value;
+	
+	
+	
+	document.getElementById("idDiv").innerText = "";
+		
+	if(id == "")
+		document.getElementById("idDiv").innerHTML = "<font color='magenta'>먼저 아이디를 입력하세요 </font>";
+	else
+		window.open("checkId.jsp?id="+ id, "checkId", "width=500 height=150 left=900 top=200");
+		
+		
+		
+		
+		
+		
+}
+</script>
+
 </body>
 </html>

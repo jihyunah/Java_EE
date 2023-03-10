@@ -156,7 +156,7 @@
  		
  		<Resource driverClassName="oracle.jdbc.driver.OracleDriver" maxActive="20" maxIdle="3" name="jdbc/oracle" password="1234" removeAbandoned="true" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:xe" username="c##java"/>
  		
-</Context><Context docBase="/Applications/study/java_ee/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/html" path="/html" reloadable="true" source="org.eclipse.jst.jee.server:html"/></Host>
+</Context></Host>
     </Engine>
   </Service>
 </Server>

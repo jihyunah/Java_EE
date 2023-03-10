@@ -15,6 +15,7 @@ import javax.naming.NamingException;
 import javax.sql.DataSource;
 
 import board.bean.BoardDTO;
+import member.dao.MemberDAO;
 
 
 public class BoardDAO {
@@ -98,9 +99,12 @@ public class BoardDAO {
       
    }
    
-   public List<BoardDTO> boardList(){
+   public List<BoardDTO> boardList(Map<String, Integer> map){
       List<BoardDTO> list = new ArrayList<BoardDTO>();
-      String sql = "select * from board order by ref desc, step asc";
+      String sql = "select * from "
+      			+ "(select rownum rn, tt.* from "
+      			+ "(select * from board order by ref desc, step asc) TT "
+      			+ ")where rn>=? and rn<=?";
       
       
       
@@ -108,6 +112,9 @@ public class BoardDAO {
          conn = ds.getConnection();
          
          pstmt = conn.prepareStatement(sql);
+         pstmt.setInt(1, map.get("startNum"));
+         pstmt.setInt(2, map.get("endNum"));
+         
          rs = pstmt.executeQuery();
          
          while(rs.next()) {
@@ -159,5 +166,29 @@ public class BoardDAO {
 	}
 	   return totalA;
    }
+   
+   public boolean isExistId(String id) {
+	   boolean existId = false;
+	   String sql = "select * from member where id=?";
+	   
+	   try {
+		   conn = ds.getConnection();
+		
+		   pstmt = conn.prepareStatement(sql);
+		   pstmt.setString(1, id);
+		
+		   rs = pstmt.executeQuery();
+		
+		   if(rs.next()) existId = true;
+		
+	   } catch (SQLException e) {
+		   e.printStackTrace();
+	   } finally {
+		   MemberDAO.close(conn, pstmt, rs);
+	   }
+			   
+	   
+	   	return existId;
+   	}
 
 } 

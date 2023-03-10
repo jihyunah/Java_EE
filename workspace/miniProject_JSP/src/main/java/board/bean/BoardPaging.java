@@ -36,4 +36,6 @@ public class BoardPaging {
 			pagingHTML.append("<span id='paging' onclick='boardPaging("+ (endPage+1) + ")'>[다음]</span>");
 	}
 	
+		int startRow = (currentPage-1)*pageSize+1;
+	
 }
