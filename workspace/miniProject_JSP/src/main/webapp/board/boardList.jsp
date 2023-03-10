@@ -12,6 +12,9 @@
 <%
 	//데이터
 	int pg = Integer.parseInt(request.getParameter("pg"));
+
+	//세션
+	String memId = (String)session.getAttribute("memId");
 	
 	//DB
 	BoardDAO boardDAO = BoardDAO.getInstance();
@@ -43,6 +46,7 @@
 	boardPaging.setTotalA(totalA);
 	
 	boardPaging.makePagingHTML();
+	
 %>
 <!DOCTYPE html>
 <html>
@@ -52,7 +56,7 @@
 <style type="text/css">
 .subjectA:link { color: black; text-decoration: none;}
 .subjectA:visited { color: black; text-decoration: none;}
-.subjectA:hover { color: green; text-decoration: underline;}
+td .subjectA:hover { color: green; text-decoration: underline;}
 .subjectA:active { color: black; text-decoration: none;}
 
 #currentPaging{
@@ -86,7 +90,7 @@ onclick="location.href='../index.jsp'" style="cursor: pointer;">
 		<% for(BoardDTO boardDTO : list) { %>
 			<tr>
 				<td align="center"><%=boardDTO.getSeq() %></td>
-				<td><a class="subjectA" href=""><%=boardDTO.getSubject() %></a></td>
+				<td><a class="subjectA" href="#" onclick="isLogin('<%=memId %>', <%=boardDTO.getSeq() %>, <%=pg %>)"><%=boardDTO.getSubject() %></a></td>
 				<td align="center"><%=boardDTO.getId() %></td>
 				<td align="center"><%=boardDTO.getHit() %></td>
 				<td align="center">
@@ -103,6 +107,13 @@ onclick="location.href='../index.jsp'" style="cursor: pointer;">
 <script type="text/javascript">
 function boardPaging(pg) {
 	location.href = "boardList.jsp?pg=" + pg;
+}
+
+function isLogin(memId, seq, pg){
+	alert(memId + ", " + seq);
+	if(memId == 'null') alert("먼저 로그인하세요 ");
+	else
+		location.href="boardView.jsp?seq=" + seq + "&pg=" + pg;
 }
 </script>
 </body>

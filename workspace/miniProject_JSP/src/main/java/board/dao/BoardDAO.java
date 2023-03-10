@@ -167,28 +167,42 @@ public class BoardDAO {
 	   return totalA;
    }
    
-   public boolean isExistId(String id) {
-	   boolean existId = false;
-	   String sql = "select * from member where id=?";
+   public BoardDTO getBoard(int seq) {
+	   BoardDTO boardDTO = null;
+	   String sql = "select * from board where seq = ?";
 	   
 	   try {
-		   conn = ds.getConnection();
+		conn = ds.getConnection();
 		
-		   pstmt = conn.prepareStatement(sql);
-		   pstmt.setString(1, id);
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setInt(1, seq);
 		
-		   rs = pstmt.executeQuery();
+		rs = pstmt.executeQuery();
 		
-		   if(rs.next()) existId = true;
+		if(rs.next()) {
+			boardDTO = new BoardDTO();
+			boardDTO.setSeq(rs.getInt("seq"));
+            boardDTO.setId(rs.getString("id"));
+            boardDTO.setNameString(rs.getString("name"));
+            boardDTO.setEmail(rs.getString("email"));
+            boardDTO.setSubject(rs.getString("subject"));
+            boardDTO.setContent(rs.getString("content"));
+            boardDTO.setRef(rs.getInt("ref"));
+            boardDTO.setLev(rs.getInt("lev"));
+            boardDTO.setStep(rs.getInt("step"));
+            boardDTO.setPseq(rs.getInt("pseq"));
+            boardDTO.setReply(rs.getInt("reply"));
+            boardDTO.setHit(rs.getInt("hit"));
+            boardDTO.setLogtime(rs.getDate("logtime"));
+		}
 		
-	   } catch (SQLException e) {
-		   e.printStackTrace();
-	   } finally {
-		   MemberDAO.close(conn, pstmt, rs);
-	   }
-			   
+	} catch (SQLException e) {
+		e.printStackTrace();
+	} finally {
+		BoardDAO.close(conn, pstmt, rs);
+	}
 	   
-	   	return existId;
-   	}
+	   return boardDTO;
+   }
 
 } 
