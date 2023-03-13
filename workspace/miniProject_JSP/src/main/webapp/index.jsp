@@ -33,5 +33,5 @@ a:active{color: black; text-decoration: none;}
 <a href="./board/boardList.jsp?pg=1">목록</a><br> <!-- 얘는 if든 else든 다 뜬다.  -->
 </h3>
 </div>
-</body>
+</body> 
 </html>

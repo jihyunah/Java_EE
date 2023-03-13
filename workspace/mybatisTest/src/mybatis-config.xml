@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd"> <!-- DTD mybatis의 환경설정. pdf파일 3쪽에서 가져옴  -->
+
+<!-- myBatis에게 Connection Pool을 만들어! 하는 명령어다.  -->
+<configuration>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOL">
+			<property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
+			<property name="url" value="jdbc:oracle:thin:@Localhost:1521:xe"/>
+			<property name="username" value="C##JAVA"/>
+			<property name="password" value="1234"/>
+			</dataSource>
+		</environment>
+	</environments>
+
+	<mappers>
+		<mapper resource="user/dao/userMapper.xml"/> 
+<!-- xml 파일의 resource라는 건, 일할 때의 자원이라고 생각하기에 .을 찍는 것이 아닌, 나의 자원의 위치를 폴더의 개념으로 /로 적어야 한다. 
+		-> 패키지의 개념이 아님! -->
+	</mappers>
+</configuration>
+
+  

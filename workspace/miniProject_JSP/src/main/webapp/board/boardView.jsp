@@ -33,36 +33,37 @@
 </head>
 <body>
 <%if(boardDTO != null) {%>
-<h3>
-<img src="../image/1.png" width="50" height="50" alt="찰칵" 
-onclick="location.href='../index.jsp'" style="cursor:pointer";>작성한 글 확인 
-</h3>
 <form name="boardWriteForm" method="post" action="">
+	<h3>
+	<img src="../image/1.png" width="50" height="50" alt="찰칵" 
+	onclick="location.href='../index.jsp'" style="cursor:pointer";>작성한 글 확인 
+	</h3>
 
-		<table border="1" cellpadding="5" cellspacing="0">
+		<table width="450" border="2" cellpadding="5" cellspacing="0" fram="hsides" rules="rows">
 			<tr>
-				<th>제목</th>
-				<td>
-					<input type="text" name="subject" id="subject" size="50" value="<%=boardDTO.getSubject() %>">
-					<div id="subjectDiv"></div>
+				<td colspan="3">
+					<h2> <%=boardDTO.getSubject() %> </h2>
 				</td>
 			</tr>
 			
 			<tr>
-				<th>내용</th>
-				<td>
-					<textarea name="content" id="content" cols="50" rows="15"><%=boardDTO.getContent()%></textarea>
-					<div id="contentDiv"></div>
-				</td>
+				<td width="150" align="center">글번호 : <%=boardDTO.getSeq() %></td>
+				<td width="150" align="center">작성자 : <%=boardDTO.getId() %></td>
+				<td width="150" align="center">조회수 : <%=boardDTO.getHit() %></td>
 			</tr>
 			
 			<tr>
-				<td colspan="2" align="center">
-					<input type="button" value="목록" onclick="">
-				</td>
+				<td colspan="3" height="250" valign="top">
+					<div style="width: 100%; height: 100%; overflow: auto;">
+					<!--  white-space: pre-wrap이 자동개행 -->
+					<pre style="white-space: pre-line; word-break: break-ali"><%=boardDTO.getContent() %></pre>
+					</div>
+					</td>
 			</tr>
+			
 			
 		</table>
+		<input type="button" value="목록" onclick="history.go(-1)">
 </form>
 
 

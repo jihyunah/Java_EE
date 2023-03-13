@@ -1,4 +1,4 @@
-<%@page import="java.util.HashMap"%>
+<%@ page import="java.util.HashMap"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="board.bean.BoardDTO"%>
@@ -110,7 +110,6 @@ function boardPaging(pg) {
 }
 
 function isLogin(memId, seq, pg){
-	alert(memId + ", " + seq);
 	if(memId == 'null') alert("먼저 로그인하세요 ");
 	else
 		location.href="boardView.jsp?seq=" + seq + "&pg=" + pg;
