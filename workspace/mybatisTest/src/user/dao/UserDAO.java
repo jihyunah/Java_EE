@@ -37,7 +37,7 @@ public class UserDAO {
 	
 	public void insert(UserDTO userDTO) {
 		SqlSession sqlSession = sqlSessionFactory.openSession(); //생성 
-		sqlSession.insert("write", userDTO); //write id in userMapper에 userDTO데이터를 넘겨준다. 
+		sqlSession.insert("userSQL.write", userDTO); //write id in userMapper에 userDTO데이터를 넘겨준다. 
 		sqlSession.commit();
 		sqlSession.close();
 		

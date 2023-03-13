@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  <mapper>
+  <mapper namespace="userSQL"> <!-- 각각의 mapper들의 이름이 같으면 안된다. 충돌 일어난다.  -->
   	<insert id="write" parameterType="user.bean.UserDTO">
   		insert into usertable values(#{name}, #{id}, #{pwd}) <!-- dto의 값을 넣기.  -->
   	</insert>
