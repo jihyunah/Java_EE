@@ -223,3 +223,144 @@ NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED -
 22-Feb-2023 13:35:51.779 INFO [main] org.apache.catalina.startup.Catalina.start 서버가 [329] 밀리초 내에 시작되었습니다.
 22-Feb-2023 13:40:01.955 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Applications/study/java_ee/lib/apache-tomcat-9.0.71/webapps/test]을(를) 배치합니다.
 22-Feb-2023 13:40:01.991 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Applications/study/java_ee/lib/apache-tomcat-9.0.71/webapps/test]에 대한 배치가 [37] 밀리초에 완료되었습니다.
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+16-Mar-2023 12:03:49.930 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.71
+16-Mar-2023 12:03:49.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 9 2023 22:33:01 UTC
+16-Mar-2023 12:03:49.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.71.0
+16-Mar-2023 12:03:49.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Mac OS X
+16-Mar-2023 12:03:49.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     13.2.1
+16-Mar-2023 12:03:49.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          aarch64
+16-Mar-2023 12:03:49.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home
+16-Mar-2023 12:03:49.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.18+9-LTS-195
+16-Mar-2023 12:03:49.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Oracle Corporation
+16-Mar-2023 12:03:49.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /Applications/study/java_ee/lib/apache-tomcat-9.0.71
+16-Mar-2023 12:03:49.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /Applications/study/java_ee/lib/apache-tomcat-9.0.71
+16-Mar-2023 12:03:49.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+16-Mar-2023 12:03:49.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+16-Mar-2023 12:03:49.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+16-Mar-2023 12:03:49.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+16-Mar-2023 12:03:49.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+16-Mar-2023 12:03:49.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/Applications/study/java_ee/lib/apache-tomcat-9.0.71/conf/logging.properties
+16-Mar-2023 12:03:49.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+16-Mar-2023 12:03:49.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+16-Mar-2023 12:03:49.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+16-Mar-2023 12:03:49.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+16-Mar-2023 12:03:49.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+16-Mar-2023 12:03:49.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/Applications/study/java_ee/lib/apache-tomcat-9.0.71
+16-Mar-2023 12:03:49.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/Applications/study/java_ee/lib/apache-tomcat-9.0.71
+16-Mar-2023 12:03:49.940 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/Applications/study/java_ee/lib/apache-tomcat-9.0.71/temp
+16-Mar-2023 12:03:49.945 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/Users/ijihyeon/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+16-Mar-2023 12:03:50.087 INFO [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8080"]을(를) 초기화합니다.
+16-Mar-2023 12:03:50.098 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException 구성요소 [Connector[HTTP/1.1-8080]]을(를) 초기화하지 못했습니다.
+	org.apache.catalina.LifecycleException: 프로토콜 핸들러 초기화가 실패했습니다.
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1050)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:554)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1045)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:724)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:746)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:307)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:477)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:459)
+		at java.base/sun.nio.ch.Net.bind(Net.java:448)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:275)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:230)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1227)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1240)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:604)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:76)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1047)
+		... 13 more
+16-Mar-2023 12:03:50.099 INFO [main] org.apache.catalina.startup.Catalina.load [273] 밀리초 내에 서버가 초기화되었습니다.
+16-Mar-2023 12:03:50.125 INFO [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+16-Mar-2023 12:03:50.125 INFO [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.71]
+16-Mar-2023 12:03:50.128 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Applications/study/java_ee/lib/apache-tomcat-9.0.71/webapps/test]을(를) 배치합니다.
+16-Mar-2023 12:03:50.251 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Applications/study/java_ee/lib/apache-tomcat-9.0.71/webapps/test]에 대한 배치가 [122] 밀리초에 완료되었습니다.
+16-Mar-2023 12:03:50.251 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Applications/study/java_ee/lib/apache-tomcat-9.0.71/webapps/docs]을(를) 배치합니다.
+16-Mar-2023 12:03:50.267 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Applications/study/java_ee/lib/apache-tomcat-9.0.71/webapps/docs]에 대한 배치가 [16] 밀리초에 완료되었습니다.
+16-Mar-2023 12:03:50.267 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Applications/study/java_ee/lib/apache-tomcat-9.0.71/webapps/manager]을(를) 배치합니다.
+16-Mar-2023 12:03:50.283 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Applications/study/java_ee/lib/apache-tomcat-9.0.71/webapps/manager]에 대한 배치가 [16] 밀리초에 완료되었습니다.
+16-Mar-2023 12:03:50.283 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Applications/study/java_ee/lib/apache-tomcat-9.0.71/webapps/examples]을(를) 배치합니다.
+16-Mar-2023 12:03:50.380 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Applications/study/java_ee/lib/apache-tomcat-9.0.71/webapps/examples]에 대한 배치가 [97] 밀리초에 완료되었습니다.
+16-Mar-2023 12:03:50.380 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Applications/study/java_ee/lib/apache-tomcat-9.0.71/webapps/ROOT]을(를) 배치합니다.
+16-Mar-2023 12:03:50.386 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Applications/study/java_ee/lib/apache-tomcat-9.0.71/webapps/ROOT]에 대한 배치가 [6] 밀리초에 완료되었습니다.
+16-Mar-2023 12:03:50.387 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Applications/study/java_ee/lib/apache-tomcat-9.0.71/webapps/host-manager]을(를) 배치합니다.
+16-Mar-2023 12:03:50.395 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/Applications/study/java_ee/lib/apache-tomcat-9.0.71/webapps/host-manager]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+16-Mar-2023 12:03:50.398 INFO [main] org.apache.catalina.startup.Catalina.start 서버가 [298] 밀리초 내에 시작되었습니다.
+16-Mar-2023 12:30:06.377 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 [GET / HTTP/1.1]을(를) 받았습니다.
+16-Mar-2023 12:30:06.578 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 [GET / HTTP/1.1]을(를) 받았습니다.
+16-Mar-2023 12:30:06.579 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 [GET / HTTP/1.1]을(를) 받았습니다.
+16-Mar-2023 12:30:07.070 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 [GET / HTTP/1.1]을(를) 받았습니다.
+16-Mar-2023 12:30:07.748 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 [GET / HTTP/1.1]을(를) 받았습니다.
+16-Mar-2023 12:30:07.749 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 [GET / HTTP/1.1]을(를) 받았습니다.
+16-Mar-2023 12:30:08.518 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 [GET / HTTP/1.1]을(를) 받았습니다.
+16-Mar-2023 12:30:08.519 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 [GET / HTTP/1.1]을(를) 받았습니다.
+16-Mar-2023 12:30:09.545 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 [GET / HTTP/1.1]을(를) 받았습니다.
+16-Mar-2023 12:30:09.546 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 [GET / HTTP/1.1]을(를) 받았습니다.
+16-Mar-2023 12:30:19.552 WARNING [main] org.apache.catalina.core.StandardServer.await 셧다운 명령을 읽으려 시도하는 중 IOException이 발생했습니다.
+	java.net.SocketTimeoutException: Read timed out
+		at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+		at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+		at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+		at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+		at java.base/java.net.SocketInputStream.read(SocketInputStream.java:200)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:637)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:864)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:810)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+16-Mar-2023 12:30:19.554 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 []을(를) 받았습니다.
+16-Mar-2023 12:37:25.799 WARNING [main] org.apache.catalina.core.StandardServer.await 셧다운 명령을 읽으려 시도하는 중 IOException이 발생했습니다.
+	java.net.SocketTimeoutException: Read timed out
+		at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+		at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+		at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+		at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+		at java.base/java.net.SocketInputStream.read(SocketInputStream.java:200)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:637)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:864)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:810)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+16-Mar-2023 12:37:25.800 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 []을(를) 받았습니다.
+16-Mar-2023 12:39:20.729 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 [GET / HTTP/1.1]을(를) 받았습니다.
+16-Mar-2023 12:39:21.677 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 [GET / HTTP/1.1]을(를) 받았습니다.
+16-Mar-2023 12:39:21.678 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 [GET / HTTP/1.1]을(를) 받았습니다.
+16-Mar-2023 12:39:22.161 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 [GET / HTTP/1.1]을(를) 받았습니다.
+16-Mar-2023 12:39:22.406 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 [GET / HTTP/1.1]을(를) 받았습니다.
+16-Mar-2023 12:39:22.407 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 [GET / HTTP/1.1]을(를) 받았습니다.
+16-Mar-2023 12:39:22.605 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 [GET / HTTP/1.1]을(를) 받았습니다.
+16-Mar-2023 12:39:32.609 WARNING [main] org.apache.catalina.core.StandardServer.await 셧다운 명령을 읽으려 시도하는 중 IOException이 발생했습니다.
+	java.net.SocketTimeoutException: Read timed out
+		at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+		at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+		at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+		at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+		at java.base/java.net.SocketInputStream.read(SocketInputStream.java:200)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:637)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:864)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:810)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+16-Mar-2023 12:39:32.611 WARNING [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 []을(를) 받았습니다.

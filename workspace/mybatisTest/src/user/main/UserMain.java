@@ -2,55 +2,57 @@ package user.main;
 
 import java.util.Scanner;
 
+import user.service.UserDeleteService;
 import user.service.UserInsertService;
+import user.service.UserSearchService;
 import user.service.UserSelectService;
 import user.service.UserService;
+import user.service.UserUpdateService;
 
 public class UserMain {
 	
 	public void menu() {
-		Scanner scan = new Scanner(System.in);
-		UserService userService =  null; //부모 (interface) 생성. null값으로. --> 리모컨 역할!
 		int num;
-		
+		Scanner scanner = new Scanner(System.in);
+		UserService userService = null;
 		while(true) {
 			System.out.println();
-			System.out.println("*******************");
-			System.out.println("1. 입력 ");
-			System.out.println("2. 출력 ");
-			System.out.println("3. 수정 ");
-			System.out.println("4. 삭제 ");
-			System.out.println("5. 검색 ");
-			System.out.println("6. 종료 ");
-			System.out.println("*******************");
-			System.out.println("번호 입력 : ");
-			num = scan.nextInt();
-			
-			if(num == 6) break;
-			
-			//클래스의 개수가 적으면 1:1관계로 생성해도 상관없다. 
-			//but 클래스의 개수(100개)가 많으면, 객체도 100개가 필요하다. 
-			//그래서 결합도 낮추기! --> 다형성 => 부모 = 자식을 참조.(상속)
-			
-			if(num == 1) {
-				userService = new UserInsertService();//부모 = 자식, 다형성 
-				
-				
-			}else if( num ==2) {
+			System.out.println("************************");
+			System.out.println("   1. 입력");
+			System.out.println("   2. 출력");
+			System.out.println("   3. 수정");
+			System.out.println("   4. 삭제");
+			System.out.println("   5. 검색");
+			System.out.println("   6.종료");
+			System.out.println("************************");
+			System.out.print("번호 입력 : ");
+			num = scanner.nextInt();
+			if(num == 6) {
+				break;
+			}
+			else if(num == 1) {
+				userService = new UserInsertService(); //부모 = 자식, 다형성
+			}
+			else if(num == 2) {
 				userService = new UserSelectService();
-				
+			}
+			else if(num == 3) {
+				userService = new UserUpdateService();
+			}
+			else if(num == 4) {
+				userService = new UserDeleteService();
+			}
+			else if(num == 5) {
+				userService = new UserSearchService();
 			}
 			
-			userService.execute();//호출 
-			
-			
+			userService.execute();
 		}//while
 	}
 	
 	public static void main(String[] args) {
-		UserMain userMain = new UserMain(); //클래스 생성
+		UserMain userMain = new UserMain();
 		userMain.menu();
-		System.out.println("프로그램을 종료합니다. ");
-		
+		System.out.println("프로그램을 종료합니다.");
 	}
 }
