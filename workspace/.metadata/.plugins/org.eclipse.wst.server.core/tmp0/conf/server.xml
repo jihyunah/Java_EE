@@ -152,11 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="/Applications/study/java_ee/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/Applications/study/java_ee/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/miniProject_JSP" path="/miniProject_JSP" reloadable="true" source="org.eclipse.jst.jee.server:miniProject_JSP">
- 		
- 		<Resource driverClassName="oracle.jdbc.driver.OracleDriver" maxActive="20" maxIdle="3" name="jdbc/oracle" password="1234" removeAbandoned="true" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:xe" username="c##java"/>
- 		
-</Context><Context docBase="/Applications/study/java_ee/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/css" path="/css" reloadable="true" source="org.eclipse.jst.jee.server:css"/></Host>
+      <Context docBase="/Applications/study/java_ee/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/Applications/study/java_ee/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/css" path="/css" reloadable="true" source="org.eclipse.jst.jee.server:css"/><Context docBase="/Applications/study/java_ee/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/el_jstl" path="/el_jstl" reloadable="true" source="org.eclipse.jst.jee.server:el_jstl"/></Host>
     </Engine>
   </Service>
 </Server>
