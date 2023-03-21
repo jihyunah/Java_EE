@@ -14,7 +14,7 @@ div {
 </style>
 </head>
 <body>
-<form name="writeForm" method="post" action="write.jsp">
+<form name="writeForm" method="post" action="/mvcMember/member/write.do">
  <table border="1" cellpadding="5" cellspacing="0">
   <tr>
   	<th>이름</th>
