@@ -3,8 +3,9 @@
 
 
 hr {
-	display: none;
+	display: lightgray;
 }
+
 
 .blind {
 	display: block;
@@ -33,82 +34,167 @@ hr {
 	padding: 0.5em 0;
 }
 
-#wrap {
-	width:100%;
-	height:900px;
-	margin: 0 auto; /* 가운데 정렬 */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	background-color: #2477cb;
+	margin: 0;
+	
 }
 
-#header {
+h1 {
+	color: white;
+	font: 2rem Merienda, sans-serif;
+}
+
+nav ul {
+  	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	list-style: none;
+	margin:  0;
+	padding: 0;
+}
+
+nav li {
+	margin: 0 80px;
 	position: relative;
-	height:50%;
-	padding-bottom: 99px;
-	border-bottom: 1px solid #cccccc;
-	background: url("../images/photo-1.jpg") no-repeat 50% 100%;
-	background-size: cover;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	font-size: 1.2rem;
+	transition: all 0.2s ease-in-out;
+	/* transition 속성은 요소의 변화가 일어날 때 그 변화를 부드럽게 처리해주는 기능.
+	transition: [속성이름] [지속시간] [가속도함수]; */
 	
 }
 
-.Logo {
-	background-color: #2477cb; 
-	padding-left: 20px; 
-	padding-top: 20px;
-	height: 60px;
+nav a:hover {
+	color: #777;
 }
 
-.Logo a {
+nav ul ul {
+	position: absolute; /* 자식 요소를 absolute로 설정 */
+	top: 100%; /* 부모 요소 아래쪽에 위치시킴 */
+	left: 0;
+	display: none; /* 초기에는 보이지 않게 함 */
+	min-width: 120px;
+	padding: 5px 0;
+	background-color: lightgray;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+	/* 박스 그림자 설정  */
+}
+
+nav ul li:hover ul {
+	display: block; /* 마우스를 올린 li의 자식 ul을 나타나게 함 */
+}
+
+nav ul ul li {
 	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul ul li a {
+	display: block;
+	padding: 10px;
+	color: black; /* 글자색 변경 */
+	text-decoration: none;
+	font-size: 1.1rem;
+}
+
+nav ul ul li a:hover {
+	background-color: #f7f7f7;
+}
+
+nav ul ul li:hover a {
+  color: red; /* 마우스를 올린 메뉴 아이템의 텍스트 컬러 */
+}
+
+
+div.mainImage {
+	justify-content: space-between;
+	padding: 0;
+	margin: 0;
+	
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	height:300px;
+	border-collapse: collapse;
+}
+
+.tab {
 	width: 200px;
-	height: 40px;
-	font: 1.3em Merienda, sans-serif;
-	text-decoration: none;
-	color: white;
-
 	
 }
 
-.topnav {
-	position: absolute;
-	left: 130px;
-	top: 40px;
-	
-}
-
-.topnav dd {
+.tab button {
 	float: left;
-	padding-right:30px;
-	margin-left: 130px;
-
+	justify-content: space-between;
+	background-color: lightgray;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 10px 20px;
+	font-size: 18px;
+	color: #999;
+	display: inline;
 }
-.topnav dd:last-child {
-	padding-right: 0;
-	margin-right: 0;
+
+.tab button:hover {
+	color: #000;
 }
 
-.topnav dd a {
-	color: white;
-	font: 0.6em;
-	text-decoration: none;
-	white-space: nowrap;
+.tab button:active {
+	background-color: transparent;
+	border: none;
+	color: #f00;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.tabcontent {
+	clear:left;
+	margin-top: 10px;
+	display: none;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-top: none;
+	border-left: none;
+ 	border-right: none;
+ 	border-bottom: none;
+}
+
+.gallery-images {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: calc(100% - 200px);
+}
+
+.image-container {
+	width: 30%;
+	border: none;
+}
+
+.image-container img {
+	max-width: 100%;
+}
+
+.image-container p {
+	text-align: center;
+	margin-top: 30px;
+	font-size: 14px;
+}
+
+.mainImage img {
 	
 }
-
-#container:after {
-	content:'';
-	display: block;
-	clear: both;
-	
-}
-
-.button {
-	float: left;
-	margin-left: 50px;
-	margin-bottom: 200px;
-	width: 50px;
-	
-}
-
-/* .button td {
-	
-
-} */

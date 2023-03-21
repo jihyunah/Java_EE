@@ -12,35 +12,79 @@
 
 </dl><!-- //skip -->
 
-
-	<div id="wrap">
-		<div id="header">
-			<h2 class="Logo"><a href="#">Dream Jeju</a></h2>
-			
-			<dl class="topnav">
-				<dt class="blind"> top navigation</dt>
-				<dd><a href="#">단체 여행 </a></dd>
-				<dd><a href="#">맞춤 여행 </a></dd>
-				<dd><a href="#">갤러리 </a></dd>
-				<dd><a href="#">문의하기 </a></dd>
-			</dl>
-			
-			
-		</div>
-	</div> <!-- Wrap -->
+	<header>
+		<h1>Dream Jeju</h1>
+		<nav>
+			<ul style="margin-top:50px;">
+				<li><a href="#">단체 여행 ▼</a>
+				<ul>
+					<li><a href="#">회사 연수</a></li>
+					<li><a href="#">수학 여행</a></li>
+				</ul>
+				</li>
+				<li><a href="#">맞춤 여행 ▼</a>
+				<ul>
+					<li><a href="#">4.3 평화 기행</a></li>
+					<li><a href="#">곶자왈 체험</a></li>
+					<li><a href="#">힐링 워크샵</a></li>
+				</ul>
+				</li>
+				<li><a href="#">갤러리</a></li>
+     		    <li><a href="#">문의하기</a></li>
+     	    </ul>
+     	  </nav>
+	</header>
 	
-	
+	<div class="mainImage" >
+ 	  <img src="images/photo-1.jpg" alt="Dream Jeju Image" />
+ 	</div>
+ 
 	<div id="container">
-		<div class="button">
-		 <table border="1" cellpadding="0" cellspacing="0">
-		 	<tr>
-		 		<td><a href="#">공지사항 </a></td>
-		 		<td><a href="#">갤러리 </a></td>
-		 </table>
-		 </div>
+		<div class="tab">
+		 <button class="tablinks active" onclick="openTab(event, 'notice')">공지사항</button>
+		 <button class="tablinks" onclick="openTab(event, 'gallery')">갤러리</button>
+		</div>
+	
+		<div id="allno">
+		<div id="notice" class="tabcontent" style="display: inline;">
+			<ul>
+				<li>사무실을 이전했습니다</li><br>
+				<li>[참가 모집] 카약 체험에 초대합니다</li><br>
+				<li>[참가 모집] 여름 방학 기간 오름 체험단을 모집합니다.</li><br>
+				<li>겨울 추천 여행지</li><br>
+				<li>가을 추천 여행지</li><br>
+			</ul>
+		</div>
+		
+		<div id="gallery" class="tabcontent">
+		  <img src="images/img-1.jpg" alt="Dream Jeju Image" />
+   		  <img src="images/img-2.jpg" alt="Dream Jeju Image" />
+  		  <img src="images/img-3.jpg" alt="Dream Jeju Image" />
+   		  <img src="images/img-1.jpg" alt="Dream Jeju Image" />
+   		  <img src="images/img-2.jpg" alt="Dream Jeju Image" />
+    	  <img src="images/img-3.jpg" alt="Dream Jeju Image" />
+		</div>
+	</div>	
+	
+	<div class="gallery-images">
+		<div class="image-container">
+			<img src="images/icon-1.jpg" alt="이미지 1에 대한 설명" class="gallery-image1">
+			<p>평화기행</p>
+		</div>
+		
+	<div class="image-container">
+      <img src="images/icon-2.jpg" alt="이미지 2에 대한 설명" class="gallery-image2">
+      <p>힐링 워크샵</p>
+    </div>
+    
+    <div class="image-container">
+      <img src="images/icon-3.jpg" alt="이미지 3에 대한 설명" class="gallery-image3">
+      <p>문의하기</p>
+    </div>
 	</div>
-			
-				
+</div>
+
+
 	<hr>
 	
 

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/ex_style.css">
+</head>
+<body>
+
+ <header>
+  <h1>Dream Jeju</h1>
+  <nav>
+    <ul style="margin-top: 50px;">
+      <li><a href="#">단체여행 ▼</a>
+        <ul>
+          <li><a href="#">회사 연수</a></li>
+          <li><a href="#">수학 여행</a></li>
+        </ul>
+      </li>
+      <li><a href="#">맞춤여행 ▼</a>
+        <ul>
+          <li><a href="#">4.3 평화 기행</a></li>
+          <li><a href="#">곶자왈 체험</a></li>
+          <li><a href="#">힐링 워크샵</a></li>
+        </ul>
+      </li>
+      <li><a href="#">갤러리</a></li>
+      <li><a href="#">문의하기</a></li>
+    </ul>
+  </nav>
+</header>
+
+ <div class="mainImage" >
+   <img src="images/photo-1.jpg" alt="Dream Jeju Image" />
+   </div>
+   
+   <div class="container" >
+  <div class="tab">
+    <button class="tablinks active" onclick="openTab(event, 'notice')">공지사항</button>
+    <button class="tablinks" onclick="openTab(event, 'gallery')">갤러리</button>
+  </div>
+  
+  <div id="allno">
+  <div id="notice" class="tabcontent" style="display: inline;">
+    <ul>
+      <li>사무실을 이전했습니다</li><br>
+      <li>[참가 모집] 카약 체험에 초대합니다</li><br>
+      <li>[참가 모집] 여름 방학 기간 오름 체험단을 모집합니다.</li><br>
+      <li>겨울 추천 여행지</li><br>
+      <li>가을 추천 여행지</li>
+    </ul>
+  </div>
+
+  <div id="gallery" class="tabcontent">
+    <img src="img/img-1.jpg" alt="Dream Jeju Image" />
+    <img src="img/img-2.jpg" alt="Dream Jeju Image" />
+    <img src="img/img-3.jpg" alt="Dream Jeju Image" />
+    <img src="img/img-1.jpg" alt="Dream Jeju Image" />
+    <img src="img/img-2.jpg" alt="Dream Jeju Image" />
+    <img src="img/img-3.jpg" alt="Dream Jeju Image" />
+    </div>
+  </div>
+
+  <div class="gallery-images">
+    <div class="image-container">
+      <img src="img/icon-1.jpg" alt="이미지 1에 대한 설명" class="gallery-image1">
+      <p>평화기행</p>
+    </div>
+    
+    <div class="image-container">
+      <img src="img/icon-2.jpg" alt="이미지 2에 대한 설명" class="gallery-image2">
+      <p>힐링 워크샵</p>
+    </div>
+    
+    <div class="image-container">
+      <img src="img/icon-3.jpg" alt="이미지 3에 대한 설명" class="gallery-image3">
+      <p>문의하기</p>
+    </div>
+  </div>
+</div>
+
+
+
+   <hr>
+<div id="footer">
+  <dl class="btmnav">
+    <dd><a href="#"><img src="img/sns-1.png" alt=""></a></dd>
+    <dd><a href="#"><img src="img/sns-2.png" alt=""></a></dd>
+    <dd><a href="#"><img src="img/sns-3.png" alt=""></a></dd>
+  </dl>
+  <div class="navlinks">
+    <a href="#">회사 소개</a>&nbsp;
+    <a href="#">개인정보처리방침</a>&nbsp;
+    <a href="#">여행약관</a>&nbsp;
+    <a href="#">사이트맵</a>
+  </div>
+  <p class="address">
+    제주특별자치도 ***동 ***(대표전화) 123-456-7890 
+  </p>
+</div><!-- //footer -->
+
+
+
+<script type="text/javascript">
+function openTab(evt, tabName = 'notice') {
+     var i, tabcontent, tablinks;
+     tabcontent = document.getElementsByClassName("tabcontent");
+     for (i = 0; i < tabcontent.length; i++) {
+       tabcontent[i].style.display = "none";
+     }
+     tablinks = document.getElementsByClassName("tablinks");
+     for (i = 0; i < tablinks.length; i++) {
+       tablinks[i].className = tablinks[i].className.replace(" active", "");
+     }
+     document.getElementById(tabName).style.display = "block";
+     evt.currentTarget.className += " active";
+   }
+
+   document.getElementById('defaultOpen').click();
+</script>
+
+
+
+   
+
+
+</body>
+</html>
