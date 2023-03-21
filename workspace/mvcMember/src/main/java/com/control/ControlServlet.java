@@ -1,8 +1,11 @@
 package com.control;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Properties;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
@@ -29,7 +32,62 @@ public class ControlServlet extends HttpServlet {
 	//init은 web.xml 을 한번만 읽어오기 때문에 사용한다. 
 	@Override
 	public void init(ServletConfig config) throws ServletException {
+		String propertyConfig = config.getInitParameter("propertyConfig");
+		System.out.println("propertyConfig = " + propertyConfig); //properties의 경로가 나옴. 
 		
+		String realFolder = config.getServletContext().getRealPath("/WEB-INF"); //web-inf의 실제 경로를 가져오라.
+		String realPath = realFolder + "/" + propertyConfig;
+		System.out.println("realPath = " + realPath);
+		
+		FileInputStream fin = null;
+	      Properties properties = new Properties();
+	      
+	      try {
+	          
+	         fin = new FileInputStream(realPath);
+	                     
+	            properties.load(fin);
+	            System.out.println("properties = "+properties);
+	            
+	         } catch (IOException e) {
+	            e.printStackTrace();
+	         }finally{
+	            try {
+	               fin.close();
+	            } catch (IOException e) {
+	               e.printStackTrace();
+	            }
+	         }
+	         System.out.println();
+	         
+	         Iterator it = properties.keySet().iterator();
+	         while(it.hasNext()) {
+	            String key = (String)it.next();
+	            System.out.println("key = "+key);
+	            
+	            String className = properties.getProperty(key);
+	            System.out.println("className = "+className);
+	            
+	            try {
+	               Class<?> classType = Class.forName(className);
+	               Object ob = classType.newInstance();
+	               
+	               System.out.println("ob = "+ob);
+	               
+	               map.put(key, ob);
+	               
+	            } catch (ClassNotFoundException e) {
+	               e.printStackTrace();
+	            } catch (InstantiationException e) {
+	               e.printStackTrace();
+	            } catch (IllegalAccessException e) {
+	               e.printStackTrace();
+	            } catch (IllegalArgumentException e) {
+	               e.printStackTrace();
+	            } 
+	            
+	            System.out.println();
+	         }//while
 	}
    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
