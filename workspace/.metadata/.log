@@ -8003,3 +8003,6 @@ java.lang.IllegalArgumentException
 
 !ENTRY org.eclipse.lsp4e 1 0 2023-03-21 18:54:47.031
 !MESSAGE [Info]	ESLint server running in node v18.12.1
+
+!ENTRY org.eclipse.wst.server.core 4 0 2023-03-22 15:51:06.724
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.

@@ -20,6 +20,7 @@ public class CheckIdService implements CommandProcess {
 		boolean existId = memberDAO.isExistId(id); // 아이디가 있다-true-사용 불가능
 
 		// 응답
+		request.setAttribute("id", id);
 		if (existId) {
 			return "/member/checkIdFail.jsp";
 		} else {
