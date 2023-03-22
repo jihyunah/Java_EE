@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+//var는 전역변수
+var a = 100
+a = 250
+console.log(a) //250. console에 값을 찍어줌. (web 개발자도구의 console탭에서.)
+{
+	var a = 200
+	console.log(a) // 200. 구역 마다 찍히는 값이 달라지게 된다. 
+	{
+		var a = 300
+		console.log(a) // 300.
+		{
+			var a = 400
+			console.log(a) // 400.
+		}
+	} console.log(a) //400. 전역변수이기에 한가지 값으로 덮어쓰기 된다. 
+} console.log(a) //400.
+console.log(a) //400.
+
+
+</script>
+</body>
+</html>
