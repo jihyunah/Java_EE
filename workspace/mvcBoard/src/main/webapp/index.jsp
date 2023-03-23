@@ -30,7 +30,7 @@ a:active{color: black; text-decoration: none;}
 	<a href="./member/deleteForm.jsp">회원탈퇴</a><br>
 	<a href="./board/boardWriteForm.jsp">글쓰기</a><br>
 <%}%>
-<a href="../board/boardList.jsp?pg=1">목록</a><br> <!-- 얘는 if든 else든 다 뜬다.  -->
+<a href="/mvcBoard/board/boardList.do?pg=1">목록</a><br> <!-- 얘는 if든 else든 다 뜬다.  -->
 </h3>
 </div>
 </body> 

@@ -62,8 +62,8 @@ public class BoardListService implements CommandProcess {
 		
 		// 응답 
 		request.setAttribute("pg", pg);
-		request.setAttribute("boardPaging", boardPaging);
 		request.setAttribute("list", list);
+		request.setAttribute("boardPaging", boardPaging);
 		return "/board/boardList.jsp";
 		
 		
