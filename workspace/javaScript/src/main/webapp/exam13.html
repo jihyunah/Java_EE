@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+var a = Number("a");
+document.write("a = " + a + "<br>"); //NaN - not a number. 숫자의 형식이 아니다.
+
+var sum = a + 1;
+document.write("sum = " + sum + "<br>"); //NaN
+
+var str = a + "str"; //NaN + "str" , 결합 
+document.write("str = " + str + "<br>"); //NaNstr
+document.write("<br>");
+
+var v1 = "가나다라";
+var v2 = "123456";
+
+var is_num1 = !isNaN(v1); // False, v1이 숫자가 아닙니까? 의 부정. 
+var is_num2 = !isNaN(v2); // True 
+
+if (is_num1){
+	document.write(v1 + "은(는) 숫자 입니다.<br>");
+} else
+	document.write(v1 + "은(는) 숫자가 아닙니다.<br>");
+	
+if (is_num2){
+	document.write(v2 + "은(는) 숫자 입니다.<br>");
+} else
+	document.write(v2 + "은(는) 숫자가 아닙니다.<br>");
+
+</script>
+</body>
+</html>
