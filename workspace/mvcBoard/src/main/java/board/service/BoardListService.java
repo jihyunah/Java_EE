@@ -20,15 +20,14 @@ public class BoardListService implements CommandProcess {
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) {
 		
-		HttpSession session = request.getSession();
-		
 		// 데이터
 		int pg = Integer.parseInt(request.getParameter("pg"));
 		
 		// 세션
+		HttpSession session = request.getSession();
 		String memId = (String)session.getAttribute("memId");
 		
-		// DB - 5개의 레코드를 꺼내서 List에 담아오기 
+		// DB - 1페이지당 5개씩 
 		BoardDAO boardDAO = BoardDAO.getInstance();
 		
 		//1페이지당 5개씩 
@@ -40,6 +39,8 @@ public class BoardListService implements CommandProcess {
 		*/
 		int endNum = pg*5;
 		int startNum = endNum-4;
+		
+		
 		
 		Map<String, Integer>map = new HashMap<>();
 		map.put("startNum", startNum);
@@ -56,11 +57,18 @@ public class BoardListService implements CommandProcess {
 		boardPaging.setPageBlock(3);
 		boardPaging.setPageSize(5);
 		boardPaging.setTotalA(totalA);
-		
+				
 		boardPaging.makePagingHTML();
 		
 		// 응답 
+		request.setAttribute("pg", pg);
+		request.setAttribute("boardPaging", boardPaging);
+		request.setAttribute("list", list);
 		return "/board/boardList.jsp";
+		
+		
+		
+		
 	}
 
 }

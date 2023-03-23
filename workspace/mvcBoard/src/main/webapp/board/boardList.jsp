@@ -1,16 +1,7 @@
-<%@ page import="java.util.HashMap"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="board.bean.BoardDTO" %>
-<%@ page import="board.bean.BoardPaging" %>
-<%@ page import="board.dao.BoardDAO" %>
-<%@ page import="java.text.SimpleDateFormat"%>
-<%@ page import="java.util.HashMap" %>
-<%@ page import="java.util.List"%>
-<%@ page import="java.util.Map" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 <html>
@@ -50,15 +41,15 @@ onclick="location.href='../index.jsp'" style="cursor: pointer;">
 		<th width="150">작성일</th>
 	</tr>
 	
-	<c:if test="${list!=null }">
+	<c:if test="${requestScope.list!=null }">
 		<c:forEach var="boardDTO" items="${list }">
 			<tr>
-				<td align="center">${ boardDTO.getSeq()}</td>
-				<td><a class="subjectA" href="#" onclick="isLogin('${ memId }', '${ boardDTO.getSubject()}')"></a></td>
-				<td align="center">${ boardDTO.getId()}</td>
-				<td align="center">${ boardDTO.getHit()}</td>
+				<td align="center">${boardDTO.seq }</td>
+				<td><a class="subjectA" href="#">${ boardDTO.getSubject()}</a></td>
+				<td align="center">${ boardDTO.id}</td>
+				<td align="center">${ boardDTO.hit}</td>
 				<td align="center">
-					${ new SimpleDateFormat("yyyy.MM.dd.").format(boardDTO.getLogtime()) }
+					<fmt:formatDate value="${boardDTO.logtime}" pattern="yyyy.MM.dd"/>
 				</td>
 			</tr>
 		</c:forEach>
@@ -70,13 +61,13 @@ onclick="location.href='../index.jsp'" style="cursor: pointer;">
 
 <script type="text/javascript">
 function boardPaging(pg) {
-	location.href = "boardList.jsp?pg=" + pg;
+	location.href = "boardList.do?pg=" + pg;
 }
 
 function isLogin(memId, seq, pg){
 	if(memId == 'null') alert("먼저 로그인하세요 ");
 	else
-		location.href="boardView.jsp?seq=" + seq + "&pg=" + pg;
+		location.href="boardView.do?seq=" + seq + "&pg=" + pg;
 }
 </script>
 </body>
