@@ -24,9 +24,11 @@ public class BoardListService implements CommandProcess {
 		
 		// 데이터
 		int pg = Integer.parseInt(request.getParameter("pg"));
-		//세션
+		
+		// 세션
 		String memId = (String)session.getAttribute("memId");
-		//DB
+		
+		// DB - 5개의 레코드를 꺼내서 List에 담아오기 
 		BoardDAO boardDAO = BoardDAO.getInstance();
 		
 		//1페이지당 5개씩 
@@ -57,7 +59,7 @@ public class BoardListService implements CommandProcess {
 		
 		boardPaging.makePagingHTML();
 		
-		
+		// 응답 
 		return "/board/boardList.jsp";
 	}
 
