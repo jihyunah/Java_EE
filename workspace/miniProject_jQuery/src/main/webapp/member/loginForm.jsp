@@ -33,24 +33,22 @@ form[name="loginForm"] div {
 
          <tr>
             <td colspan="2" align="center">
-               <input type="button" value="로그인" onclick="checkLogin()"> 
+               <input type="button" value="로그인" id="loginBtn"> 
                <input type="button" value="회원가입" onclick="location.href='miniProject_jQuery/member/writeForm.do'">
             </td>
          </tr>
       </table>
+     	<br><br>
+     	
+     	<div id="loginResult"></div>
    </form>
+<script type="text/javascript" src="../js/jquery-3.6.4.min.js"></script> <!-- 이때부터 jQuery 쓸 수 있음. -->
 <script type="text/javascript">
-   function checkLogin(){
-      document.getElementById("idDiv").innerText="";
-      document.getElementById("pwdDiv").innerText="";
-      
-      if(document.getElementById("id").value == "") 
-         document.getElementById("idDiv").innerText = "아이디를 입력하세요";
-      else if(document.getElementById("pwd").value == "") 
-         document.getElementById("pwdDiv").innerText = "비밀번호 입력";
-      else document.loginForm.submit();
-   }
-   </script>
+$('#loginBtn').click(function(){
+	alert('dafsda')
+}); /* 딸라 함수 */
+
+</script>
 </body>
 </html>
 
