@@ -19,6 +19,40 @@
 	
 	<c:if test="${memId != null }">
 		<h3>"${memId }"님 로그인</h3>
+		<input type="button" value="로그아웃" id="logoutBtn">
 	</c:if>
 </div> 
+
+
+<!-- CDN 방식 : 인터넷 사이트를 통해 접근하기에, 다운받아서 굳이 할 필요 없다. -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script type="text/javascript">
+
+$('#logoutBtn').click(function(){
+	//서버 요청 - ajax와 연결. 
+	$.ajax({
+		type:'post',
+		url: '/miniProject_jQuery/member/logout.do',
+		success: function(){
+			alert("로그아웃");
+			//location.href='/miniProject_jQuery/index.jsp';
+			location.href='./index.jsp'; //현재 위치가 index다. 
+		},
+		error: function(err){
+			console.log(err);
+		}
+	});
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+
 

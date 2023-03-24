@@ -31,7 +31,7 @@
   	 
   	 <input type="hidden" id="check" value="">
   	 
-  	 <input type="button" value="중복체크" onclick="checkId()">
+  	 <input type="button" value="중복체크" id="checkIdBtn">
   	 
   	 
   	 
@@ -119,25 +119,20 @@
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script type="text/javascript" src="../js/member.js"></script>
 <script type="text/javascript">
-function checkId(){
-	   
-	   var id = document.getElementById("id").value;
-	   //let id;   //뭘 써도 상관없음
-	   //const id;
-	   
-	   
-	   document.getElementById("idDiv").value == "";
-	   if(id ==""){
-	      document.getElementById("idDiv").innerHTML = "<font color='magenta'>먼저 아이디를 입력하세요</font>";
-	   }
-	   else{
-	      window.open("/mvcMember/member/checkId.do?id=" + id,"checkId","width=500 height=150 left=900 top=200");
-	      
-	   }
-
-
-	}
 </script>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script type="text/javascript">
+
+
+
+
+
+
+</script>
+
+
 </body>
 </html>
 
