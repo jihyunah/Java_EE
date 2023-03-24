@@ -68,7 +68,7 @@ html {
 	
 	<div id="container">
 		<div id="nav">
-			<jsp:include page="./main/nav.jsp"></jsp:include> <%-- include: 포함시키다.  --%>
+			<jsp:include page="./main/nav.jsp" /> <%-- include: 포함시키다.  --%>
 		</div>
 		<div id="section">
 			<h3>

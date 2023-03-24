@@ -15,7 +15,7 @@ form[name="loginForm"] div {
 </style>
 </head>
 <body>
-<form name="loginForm" method="post" action="login.jsp">
+<form name="loginForm" method="post" action="location.href='/miniProject_jQuery/member/login.do'">
 		<table border="1" cellpadding="5" cellspacing="0">
 			<tr>
 				<th>아이디</th>
