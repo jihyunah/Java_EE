@@ -75,7 +75,7 @@ html {
 				<c:if test="${ empty display }"> <!-- display의 값이 비어있다면, ~~  -->
 					저희 홈페이지를 방문해주셔서 감사합니다.<br>
 					Have a nice day!!<br>
-					<img src="./image/2.gif" width="200" height="300" alt="찰칵" style="margin-top: 3px;">
+					<img src="/miniProject_jQuery/image/2.gif" width="200" height="300" alt="찰칵" style="margin-top: 3px;">
 				</c:if>
 				<c:if test="${ not empty display }">
 					<jsp:include page="${display }" /> <!-- display의 값이 비어있다면, ~~  -->
