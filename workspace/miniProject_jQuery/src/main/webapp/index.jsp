@@ -82,7 +82,7 @@ html {
 					<img src="/miniProject_jQuery/image/2.gif" width="200" height="300" alt="찰칵" style="margin-top: 3px;">
 				</c:if>
 				<c:if test="${ not empty display }">
-					<jsp:include page="${display }" /> <!-- display의 값이 비어있다면, ~~  -->
+					<jsp:include page="${display }" /> <!-- display의 값이 채워져 있다면, ~~  -->
 				</c:if>
 				
 				

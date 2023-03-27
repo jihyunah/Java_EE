@@ -23,7 +23,7 @@
 <img src="../image/1.png" width="50" height="50" alt="찰칵" 
 onclick="location.href='../index.jsp'" style="cursor:pointer";>글쓰기 
 </h3>
-<form name="boardWriteForm" method="post" action="/mvcBoard/board/boardWrite.do">
+<form name="boardWriteForm" id="boardWriteForm">
 
 		<table border="1" cellpadding="5" cellspacing="0">
 			<tr>
@@ -44,14 +44,37 @@ onclick="location.href='../index.jsp'" style="cursor:pointer";>글쓰기
 			
 			<tr>
 				<td colspan="2" align="center">
-					<input type="button" value="글쓰기" onclick="checkBoardWrite()">
+					<input type="button" value="글쓰기" id="boardWriteBtn">
 					<input type="reset" value="다시작성">
 				</td>
 			</tr>
 			
 		</table>
 </form>
+<script type="text/javascript" src="../js/jquery-3.6.4.min.js"></script>
 <script type="text/javascript">
+$('#boardWriteBtn').click(function(){
+	$('#subjectDiv').empty();
+	$('#contentDiv').empty();
+	
+	if( $('#subject').val() == '' ){
+		$('#subjectDiv').text('제목 입력');
+		$('#subject').focus();
+	}
+	
+	else if( $('#content').val() == '' ){
+		$('#contentDiv').text('내용 입력');
+		$('#content').focus();
+	}
+
+	else {
+		location.href='/miniProject_jQuery/index.jsp';
+	}
+	
+});
+
+
+
 	function checkBoardWrite(){
 		document.getElementById("subjectDiv").innerText="";
 		document.getElementById("contentDiv").innerText="";

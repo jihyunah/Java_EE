@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="/Applications/study/java_ee/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/Applications/study/java_ee/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/miniProject_jQuery" path="/miniProject_jQuery" reloadable="true" source="org.eclipse.jst.jee.server:miniProject_jQuery"/><Context docBase="/Applications/study/java_ee/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/jQuery" path="/jQuery" reloadable="true" source="org.eclipse.jst.jee.server:jQuery"/></Host>
+      <Context docBase="/Applications/study/java_ee/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/Applications/study/java_ee/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/miniProject_jQuery" path="/miniProject_jQuery" reloadable="true" source="org.eclipse.jst.jee.server:miniProject_jQuery"/><Context docBase="/Applications/study/java_ee/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/jQuery" path="/jQuery" reloadable="true" source="org.eclipse.jst.jee.server:jQuery"/><Context docBase="/Applications/study/java_ee/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/exminiProject_jQuery" path="/exminiProject_jQuery" reloadable="true" source="org.eclipse.jst.jee.server:exminiProject_jQuery"/></Host>
     </Engine>
   </Service>
 </Server>
