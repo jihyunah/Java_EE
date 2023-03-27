@@ -1,87 +1,98 @@
-function select(){
-	//document.writeForm.email2.value = document.writeForm.email3.value;
-	document.getElementById("email2").value = document.getElementById("email3").value;
-}
-
-function checkWrite(){
-	//if(document.writeForm.name.value == "") alert("이름 입력하세요")
-	//if(document.getElementById("name").value == "") alert("이름 입력하세요")
-	
-	document.getElementById("nameDiv").innerText = "";
-	document.getElementById("idDiv").innerText = "";
-	document.getElementById("pwdDiv").innerText = "";
-	
-	if(document.getElementById("name").value == "")
-		document.getElementById("nameDiv").innerText="이름 입력";
-		
-	else if(document.getElementById("id").value == "")
-		document.getElementById("idDiv").innerText="아이디 입력";
-		
-	else if(document.getElementById("pwd").value == "")
-		document.getElementById("pwdDiv").innerText="비밀번호 입력";
-		
-	else if(document.getElementById("pwd").value != document.getElementById("repwd").value)
-		document.getElementById("pwdDiv").innerText="비밀번호가 맞지 않습니다";
-		
-	else if(document.getElementById("id").value != document.getElementById("check").value)
-		document.getElementById("idDiv").innerText="중복체크 하세요";
-		
-	else
-		document.writeForm.submit();
-}
-
-function checkUpdate() {
-	document.getElementById("nameDiv").innerText = "";
-	document.getElementById("pwdDiv").innerText = "";
-	
-	if(document.getElementById("name").value == "")
-		document.getElementById("nameDiv").innerText="이름 입력";
-	else if(document.getElementById("pwd").value == "")
-		document.getElementById("pwdDiv").innerText="비밀번호 입력";
-	else if(document.getElementById("pwd").value != document.getElementById("repwd").value)
-		document.getElementById("pwdDiv").innerText="비밀번호가 맞지 않습니다";
-	else
-		document.updateForm.submit();
-}
-
-/* Daum 우편번호 */
-function execDaumPostcode() {
-    new daum.Postcode({
-        oncomplete: function(data) {
-            // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
-
-            // 각 주소의 노출 규칙에 따라 주소를 조합한다.
-            // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-            var addr = ''; // 주소 변수
-            var extraAddr = ''; // 참고항목 변수
-
-            //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
-            if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
-                addr = data.roadAddress;
-            } else { // 사용자가 지번 주소를 선택했을 경우(J)
-                addr = data.jibunAddress;
-            }
-
-            // 우편번호와 주소 정보를 해당 필드에 넣는다.
-            document.getElementById('zipcode').value = data.zonecode;
-            document.getElementById("addr1").value = addr;
-            // 커서를 상세주소 필드로 이동한다.
-            document.getElementById("addr2").focus();
-        }
-    }).open();
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$(function(){
+   $('#join').submit(function(){
+      var user_id = $('input[name="user_id"]').val();
+      if(!user_id){
+         alert("아이디를 입력하세요.");
+         $('input[name=user_id]').focus();
+         return false;
+      }
+      
+      var user_pw = $('input[name="user_pw"]').val();
+      if(!user_pw){
+         alert("비밀번호를 입력하세요.");
+         $('input[name=user_pw]').focus();
+         return false;
+      }
+      
+      var juminno = $('input[name="juminno"]').val();
+      if(!juminno){
+         alert("주민번호를 입력하세요.");
+         $('input[name=juminno]').focus();
+         return false;
+      }
+      
+      if( !$('input[name="gender"]').is(':checked') ){
+        alert("성별을 입력하세요.");
+        
+        //radio는 배열로 받는다.
+        //document.form1.gender[1].checked = true;
+        //$('input[name="gender"]:eq(1)').attr('checked', true); // attr=attribute
+        $('input[name="gender"]:eq(1)').prop('checked', true);
+        
+        
+        return false;
+      }//if
+      
+      var email = $('input[name="email"]').val();
+      if(!email){
+         alert("이메일을 입력하세요.");
+         $('input[name=email]').focus();
+         return false;
+      }
+      
+      var url = $('input[name="url"]').val();
+      if(!url){
+         alert("URL을 입력하세요.");
+         $('input[name=url]').focus();
+         return false;
+      }
+      
+      var hpno = $('input[name="hpno"]').val();
+      if(!hpno){
+         alert("핸드폰 번호를 입력하세요.");
+         $('input[name=hpno]').focus();
+         return false;
+      }
+      
+      if(!$('input[name="hobby"]').is(':checked') ){
+        alert("취미를 선택하세요.");
+        $('input[name="hobby"]:eq(0)').attr('checked', true);
+        return false;
+     }
+           
+     if($('select[name="job"] > option:selected').index() < 1){
+         alert("직업을 선택하세요.");
+         $('select[name="job"] > option:eq(1)').attr('selected', true);
+         return false;
+      }
+      
+      //입력한 내용을 화면에 출력
+      var gender = $('input[name="gender"]:checked').val();
+      
+      //선택한 값들만 넘어온다.
+      var hobby = $('input[name="hobby"]:checked');
+      var hobby_val = '';
+      hobby.each(function(){   //for문
+        //alert($(this).val());   //반복문에서 hobby안에 포함된 객체
+        hobby_val += $(this).val();
+     });
+      
+      var job = $('select[name="job"] > option.selected').val();
+      
+      var result = '<ul>';
+      result += '<li>아이디 : ' + user_id + '</li>';
+      result += '<li>비밀번호 : ' + user_pw + '</li>';
+      result += '<li>주민번호 : ' + juminno + '</li>';
+      result += '<li>성별 : ' + gender + '</li>';
+      result += '<li>이메일 : ' + email + '</li>';
+      result += '<li>홈페이지 : ' + url + '</li>';
+      result += '<li>핸드폰 : ' + hpno + '</li>';
+      result += '<li>취미 : ' + hobby_val + '</li>';
+      result += '<li>직업 : ' + job + '</li>';
+      result += '</ul>'
+      
+      $('body').html(result);
+      
+      return false;
+   });
+});

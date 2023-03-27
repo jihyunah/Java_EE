@@ -60,7 +60,17 @@ pre {
 <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script type="text/javascript">
 $(function(){ /* window.onload=function(){} => script의 onload와 같은 것이다. */
-
+	$('h1[id="title"]').html('두번째 제목'); //$('#title').html('두번째 제목'); --> 처음엔 값을 비워놓고 나중에 실행할 때 동적으로 값을 집어넣겠다. 
+	$('div#container > h1#title').html('제목 입니다');
+	$('div#container > div.box').html('안녕하세요');
+	$('ul > li').text('목록입니다');
+	$('ul > li:eq(1)').html('jQuery 고유의 방식도 있습니다.'); //1번째 li를 저렇게 입력해라. 
+	$('p, pre:eq(0)').html('다중요소 선택');
+	$('pre[name="source"]').html('CSS2의 선택자');
+	$('li:first-child').html('First-Child');
+	$('li:eq(0)').css('color', 'red');
+	$('li:last-child').html('Last-Child');
+	$('li:eq(4)').css('color', 'red');
 
 }); 
 
