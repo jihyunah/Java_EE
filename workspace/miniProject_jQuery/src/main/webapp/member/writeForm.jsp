@@ -14,7 +14,7 @@
 </style>
 </head>
 <body>
-<form id="writeForm" method="post" action="write.jsp">
+<form id="writeForm" method="post" action="">
  <table border="1" cellpadding="5" cellspacing="0">
   <tr>
   	<th>이름</th>
@@ -31,7 +31,6 @@
   	 
   	 <input type="hidden" id="check" value="">
   	 
-  	 <input type="button" value="중복체크" id="checkIdBtn">
   	 
   	 
   	 
@@ -109,70 +108,52 @@
   
   <tr>
   	<td colspan="2" align="center">
-  	 <input type="button" value="회원가입" onclick="checkWrite()">
+  	 <input type="button" value="회원가입" id="writeBtn">
   	 <input type="reset" value="다시작성">
   	</td>
   </tr>
  </table>
 </form>
 
+<script type="text/javascript" src="../js/jquery-3.6.4.min.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script type="text/javascript" src="../js/member.js"></script>
 
-
-
-<script type="text/javascript" src="http://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script type="text/javascript">
-
-$('#checkIdBtn').click(function(){
-	let status = $('#id').attr('status'); //아이디 중복체크 상태
-	let id = $('#id').val(); //입력한 아이디값
-	
-	$('#idDiv').empty();
-	
-	if( $('#id').val() == '' ) {
+//중복 아이디 체크 
+$('#id').focusout(function(){
+	if($('#id').val() == ''){
 		$('#idDiv').text('먼저 아이디를 입력하세요');
-		$('#id').focus();
-		return;
-	}
-	else {
-	
-	      $.ajax({ //jQuery.ajax 
-	         type: 'post', //'get' or 'post'
-	         url: '/miniProject_jQuery/member/checkId.do', //보내주는 주소 
-	         data: 'id=' + $('#id').val(),//서버로 보낼 데이터(id)
-	         dataType: 'text',//서버로부터 받는 자료형, text, xml, html, json
-	         success: function(data){ //보통 data라고 쓴다. 그렇지만 어떤 이름을 집어 넣어도 된다.
-	        	//기존 아이디가 존재한다면
-					if(data.cnt > 0){
-						$('#id').attr('status', 'no');
-						$('#id').after("<span class='checkIdSpan' style='color:red'>이미 존재하는 아이디입니다.</span>")
-						$('#id').focus();
-					} //기존 아이디가 존재하지 않으면
-					else{
-						$('#id').attr('status', 'yes');
-						$('#id').after("<span class='checkIdSpan' style='color:blue'>사용 가능한 아이디입니다.</span>")
-					}
-						
+		$('#idDiv').css('color', 'magenta');
+	} else {
+		//서버로 요청 
+		$.ajax({
+			type:"post", 
+			url:'/miniProject_jQuery/member/checkId.do', 
+			data: 'id='+$('#id').val(), //서버로 보내는 데이터 
+			dataType: "text", //서버로부터 받은 데이터형, "text", "html", "xml", "json"이 있다.
+			success: function(data){ //data는 위에 data 아님.
+				data = data.trim();
+			
+				if(data =='exist'){
+					$('#idDiv').text('사용 불가능');
+					$('#idDiv').css('color', 'red');
+				}
+				else if(data =='non_exist'){
+					$('#idDiv').text('사용 가능');
+					$('#idDiv').css('color', 'blue');
 					
-		            
-		         
-		         location.href='../member/checkId.do';
-	         },
-	        	
-	            
-	        
-	         error: function(err){ //404, 505, 500 error가 나오면, 콘솔에 error가 나왔다고 뜬다. 
-	            console.log(err);
-	         }
-	      });
-	   }
-	   
-	});   /* jquery문으로 #은 아이디 .은 클래스 */
-
-
-
-
+					//중복체크 확인용도 처리해야한다. - hidden 박스의 value에 동일한 값 넣기.
+					$('#check').val($('#id').val());
+				}
+				
+			},
+			error: function(err){
+				console.log(err);
+			}
+		});
+	}
+});
 
 </script>
 

@@ -952,3 +952,18 @@ java.util.concurrent.TimeoutException
 
 !ENTRY org.eclipse.lsp4e 1 0 2023-03-27 12:44:17.650
 !MESSAGE [Info]	ESLint server running in node v18.12.1
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-03-27 15:32:08.862
+!MESSAGE [Info]	ESLint server running in node v18.12.1
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-03-27 15:32:09.179
+!MESSAGE [Info]	[lspserver] Using Typescript version (bundled) 4.9.3 from path "/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.1.202211171559/node_modules/typescript/lib/tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-03-27 16:34:59.481
+!MESSAGE [Info]	ESLint server running in node v18.12.1
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-03-27 16:39:24.016
+!MESSAGE [Info]	ESLint server running in node v18.12.1
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-03-27 16:46:59.150
+!MESSAGE [Info]	ESLint server running in node v18.12.1

@@ -47,8 +47,8 @@ form[name="loginForm"] div {
 <script type="text/javascript" src="../js/jquery-3.6.4.min.js"></script>
 <script type="text/javascript">
 $('#loginBtn').click(function(){
-   $('#idDiv').empty();
-   $('#pwdDiv').empty();
+   $('#idDiv').empty(); //div영역을 초기화
+   $('#pwdDiv').empty(); //div영역을 초기화
    
    if( $('#id').val() == '' ) {
       $('#idDiv').text('아이디를 입력');
@@ -59,12 +59,13 @@ $('#loginBtn').click(function(){
       $('#pwd').focus();
    }
    else {
-      $.ajax({ //jQuery.ajax 
+      $.ajax({ //jQuery.ajax 서버 요청 
          type: 'post', //'get' or 'post'
          url: '/miniProject_jQuery/member/login.do', //보내주는 주소 
          data: 'id=' + $('#id').val() + '&pwd=' + $('#pwd').val(),//서버로 보낼 데이터(id, pwd)
          dataType: 'text',//서버로부터 받는 자료형, text, xml, html, json
-         success: function(data){ //보통 data라고 쓴다. 그렇지만 어떤 이름을 집어 넣어도 된다.
+         success: function(data){ //서블렛에 갔다가, jQuery는 반드시 고무줄과 같아서 success로 돌아온다. 
+        	 //보통 data라고 쓴다. 그렇지만 어떤 이름을 집어 넣어도 된다.
             data = data.trim(); //공백 제거 
             
             if(data == 'ok'){

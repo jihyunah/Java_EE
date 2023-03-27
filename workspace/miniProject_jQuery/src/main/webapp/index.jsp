@@ -55,15 +55,19 @@ html {
    width: 1100px;
    height: 10%;
 }
+
+
 </style>
 </head>
 <body>
 <div id="wrap">
 	<div id="header">
 		<h1>
-		<img src="/miniProject_jQuery/image/2.gif" width="90" height="100"
-		onclick="location.href='/miniProject_jQuery/index.jsp'"
-		style="cursor:pointer"> MVC를 이용한 미니 프로젝트</h1>
+			<img src="/miniProject_jQuery/image/2.gif" width="90" height="100"
+			onclick="location.href='/miniProject_jQuery/index.jsp'"
+			style="cursor:pointer"> MVC를 이용한 미니 프로젝트
+		</h1>
+		<jsp:include page="./main/menu.jsp" />
 	</div>
 	
 	<div id="container">
@@ -80,6 +84,8 @@ html {
 				<c:if test="${ not empty display }">
 					<jsp:include page="${display }" /> <!-- display의 값이 비어있다면, ~~  -->
 				</c:if>
+				
+				
 			</h3>
 		</div>
 	</div>
