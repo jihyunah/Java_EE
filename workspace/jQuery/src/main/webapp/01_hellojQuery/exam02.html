@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 id="hello"></h1>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script type="text/javascript">
+function hello($){
+	var h1 = $('#hello') //아이디가 hello인 아이를 가져와라 
+	h1.html('Hello jQuery') //그 안에 hello jquery를 찍어라. 
+	h1.text('hello jquery') //h1.innerText = 'hello jquery' 와 같은 것임. 
+}
+
+
+jQuery(hello);
+
+</script>
+
+</body>
+</html>
