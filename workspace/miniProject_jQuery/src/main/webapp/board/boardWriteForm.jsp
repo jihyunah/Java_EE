@@ -72,7 +72,22 @@ $('#boardWriteBtn').click(function(){
 	}
 
 	else {
-		location.href='/miniProject_jQuery/index.jsp';
+		$.ajax({ //갔다가 다시 돌아온다.
+			type: 'post',
+			url: '/miniProject_jQuery/board/boardWrite.do',
+			data: $('#boardWriteForm').serialize(), 
+			//2. 'subject=' + $('#subject').val() + '&content=' + $('#content').val()
+			//3. {'subject' : $('#subject').val(), 'content': $('#content').val()}
+			success: function(){
+				alert('글 작성 완료!!');
+				location.href='../index.jsp';
+			},
+			error: function(err){
+				console.log(err);
+			}
+			
+		});
+		
 	}
 	
 });

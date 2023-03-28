@@ -23,10 +23,10 @@ public class BoardWriteService implements CommandProcess {
 		
 		
 		//세션 
-		//HttpSession session = request.getSession(); //이거 안해도 jsp파일은 session이 내장객체로 있다. 
-		String id = "hong";
-		String name = "홍길동";
-		String email = "hong@gmail.com";
+		HttpSession session = request.getSession();  
+		String id = (String) session.getAttribute("memId");
+		String name = (String) session.getAttribute("memName");
+		String email = (String) session.getAttribute("memEmail");
 		
 		//위 5개 데이터 묶음처리 -> Map 사용하기 
 		Map<String, String> map = new HashMap<String, String>();
