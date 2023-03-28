@@ -80,7 +80,7 @@ $('#boardWriteBtn').click(function(){
 			//3. {'subject' : $('#subject').val(), 'content': $('#content').val()}
 			success: function(){
 				alert('글 작성 완료!!');
-				location.href='../index.jsp';
+				location.href='/miniProject_jQuery/board/boardList.do?pg=1';
 			},
 			error: function(err){
 				console.log(err);

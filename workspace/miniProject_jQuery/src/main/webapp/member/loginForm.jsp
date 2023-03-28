@@ -5,23 +5,34 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style>
+
+
+<style type="text/css">
+form[name="loginForm"] {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 0 auto;
+   text-align: left;
+}
 form[name="loginForm"] div {
    color: red;
    font-size: 8pt;
    font-weight: bold;
 }
+
 </style>
 </head>
 <body>
-<h3>
-로그인
-</h3>
+
 <form name="loginForm" id="loginForm">
 <!-- <form name="loginForm" method="post" action="/miniProject_jQuery/member/login.do"> -->
+      <a href="../index.jsp" style="text-decoration: none;">
+     	 <h1>로그인</h1>
+      </a>
       <table border="1" cellpadding="5" cellspacing="0">
          <tr>
-            <th>아이디</th>
+            <th width="100">아이디</th>
             <td><input type="text" name="id" id="id">
                <div id="idDiv"></div></td>
          </tr>
