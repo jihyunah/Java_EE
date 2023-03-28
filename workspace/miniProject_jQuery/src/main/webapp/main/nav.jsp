@@ -22,7 +22,7 @@
 	
 	<!-- 현재 세션이 있을 때  -->
 	<c:if test="${memId != null }">
-		<h3>"${memId }"님 로그인</h3>
+		<h3>${memId }님 로그인</h3>
 		<input type="button" value="로그아웃" id="logoutBtn">
 	</c:if>
 </div> 

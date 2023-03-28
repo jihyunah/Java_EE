@@ -6,16 +6,16 @@
 <meta charset="UTF-8">
 <title>글쓰기</title>
 <style>
-#contentDiv {
+#boardWriteForm div {
 	color: red;
 	font-size: 8pt;
 	font-weight: bold;
 }
-#subjectDiv {
+/* #subjectDiv {
 	color: red;
 	font-size: 8pt;
 	font-weight: bold;
-}
+} */
 </style>
 </head>
 <body>
@@ -55,15 +55,19 @@ onclick="location.href='../index.jsp'" style="cursor:pointer";>글쓰기
 <script type="text/javascript">
 $('#boardWriteBtn').click(function(){
 	$('#subjectDiv').empty();
-	$('#contentDiv').empty();
+	$('#contentDiv').empty(); //초기화 
 	
 	if( $('#subject').val() == '' ){
 		$('#subjectDiv').text('제목 입력');
+		$('#subjectDiv').css('color', 'red');
+		$('#subjectDiv').css('font', '8pt bold')
 		$('#subject').focus();
 	}
 	
 	else if( $('#content').val() == '' ){
 		$('#contentDiv').text('내용 입력');
+		$('#contentDiv').css('color', 'red');
+		$('#contentDiv').css('font', '8pt bold')
 		$('#content').focus();
 	}
 
@@ -74,7 +78,7 @@ $('#boardWriteBtn').click(function(){
 });
 
 
-
+/* 
 	function checkBoardWrite(){
 		document.getElementById("subjectDiv").innerText="";
 		document.getElementById("contentDiv").innerText="";
@@ -88,7 +92,7 @@ $('#boardWriteBtn').click(function(){
 			document.getElementById("content").focus();
 		}
 		else document.boardWriteForm.submit();
-	}
+	} */
 </script>
 </body>
 </html>
