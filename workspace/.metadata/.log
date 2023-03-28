@@ -4270,3 +4270,9 @@ java.lang.Error: SWT Resource was not properly disposed
 
 !ENTRY org.eclipse.lsp4e 1 0 2023-03-28 15:52:29.869
 !MESSAGE [Info]	[lspserver] Using Typescript version (bundled) 4.9.3 from path "/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.1.202211171559/node_modules/typescript/lib/tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-03-28 17:16:59.492
+!MESSAGE [Info]	ESLint server running in node v18.12.1
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-03-28 17:32:13.000
+!MESSAGE [Info]	ESLint server running in node v18.12.1
