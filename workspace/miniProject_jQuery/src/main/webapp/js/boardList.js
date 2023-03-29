@@ -39,6 +39,23 @@ $(document).ready(function(){
 			
 			//페이징 처리
 			$('#boardPagingDiv').html(data.pagingHTML);
+			
+			
+			//로그인 여부
+			$('.subjectA').click(function(){
+				if($('#memId').val() == '')
+					alert('먼저 로그인하세요');
+				else {
+					var seq = $(this).parent().prev().text(); //요소의 부모의 값, 형제들 중에서 앞의 값을 꺼내라.  
+					
+					// console.log(seq.prop('tagName'));
+					console.log(seq);
+					
+					
+					var pg = $('#pg').val();
+					location.href='/miniProject_jQuery/board/boardView.do?seq=' + seq + '&pg='+ pg;
+				}
+			});
 		},
 		error: function(err){
 			console.log(err);

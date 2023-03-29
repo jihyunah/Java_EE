@@ -39,6 +39,7 @@
 <body>
 
 <input type="text" id="pg" value="${pg }">
+<input type="text" id="memId" value="${memId }"> 
 
 <table id="boardListTable" border="1" cellpadding="5" cellspacing="0" frame="hsides" rules="rows">
 	<tr>

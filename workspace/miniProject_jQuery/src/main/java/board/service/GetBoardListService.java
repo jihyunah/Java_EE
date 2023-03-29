@@ -7,6 +7,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -46,7 +47,9 @@ public class GetBoardListService implements CommandProcess {
 		boardPaging.setTotalA(totalA);
 		boardPaging.makePagingHTML(); //이전, 다음 버튼 만드는 함수 
 		
-		System.out.println(boardPaging);
+		//세션 
+		HttpSession session = request.getSession();
+		String memId = (String) session.getAttribute("memId");
 		
 		//List객체를 json으로 변환시켜서 보내야 한다.
 		JSONObject json = new JSONObject();
@@ -83,6 +86,8 @@ public class GetBoardListService implements CommandProcess {
 		}
 		
 		//응답
+		request.setAttribute("pg", pg); //있어도 되고, 없어도 되고.
+		request.setAttribute("memId", memId);
 		request.setAttribute("json", json);
 		return "/board/getBoardList.jsp";
 	}

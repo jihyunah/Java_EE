@@ -24,8 +24,9 @@ public class BoardViewService implements CommandProcess {
 		//응답 
 		request.setAttribute("seq", seq);
 		request.setAttribute("pg", pg);
+		request.setAttribute("display", "/board/boardView.jsp");
 		
-		return "/board/boardView.jsp";
+		return "/index.jsp";
 	}
 
 }
