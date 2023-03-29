@@ -14,6 +14,7 @@ import org.json.simple.JSONObject;
 import com.control.CommandProcess;
 
 import board.bean.BoardDTO;
+import board.bean.BoardPaging;
 import board.dao.BoardDAO;
 
 public class GetBoardListService implements CommandProcess {
@@ -34,6 +35,18 @@ public class GetBoardListService implements CommandProcess {
 		map.put("endNum", endNum);
 		
 		List<BoardDTO> list = boardDAO.boardList(map);
+		
+		//페이징 처리 
+		int totalA = boardDAO.getTotalA(); //총글수 
+		
+		BoardPaging boardPaging = new BoardPaging();
+		boardPaging.setCurrentPage(pg);
+		boardPaging.setPageBlock(3);
+		boardPaging.setPageSize(5);
+		boardPaging.setTotalA(totalA);
+		boardPaging.makePagingHTML(); //이전, 다음 버튼 만드는 함수 
+		
+		System.out.println(boardPaging);
 		
 		//List객체를 json으로 변환시켜서 보내야 한다.
 		JSONObject json = new JSONObject();
@@ -63,6 +76,11 @@ public class GetBoardListService implements CommandProcess {
 			
 			json.put("list", array);
 		}//if
+		
+		//BoardPaging -> JSON 으로 변환 <화면에 띄울 값(pagingHTML)만 가져가면 된다.>
+		{
+			json.put("pagingHTML", boardPaging.getPagingHTML().toString()); //StringBuffer -> String 변
+		}
 		
 		//응답
 		request.setAttribute("json", json);

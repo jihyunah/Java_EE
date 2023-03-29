@@ -27,6 +27,13 @@
 	margin: 5px;
 	cursor: pointer;
 }
+#boardListTable th {
+	font-size: 12pt;
+}
+#boardListTable td {
+	font-size: 10pt;
+}
+
 </style>
 </head>
 <body>
@@ -45,11 +52,11 @@
 	<!-- 동적처리 -->
 </table>
 
-<div style="margin-top: 15px; width: 850px; text-align: center;"></div>
+<div id="boardPagingDiv" style="margin-top: 15px; width: 850px; text-align: center;"></div>
 
 <script type="text/javascript">
 function boardPaging(pg) {
-	location.href = "boardList.jsp?pg=" + pg;
+	location.href = "boardList.do?pg=" + pg;
 }
 </script>
 

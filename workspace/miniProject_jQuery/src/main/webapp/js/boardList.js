@@ -11,26 +11,34 @@ $(document).ready(function(){
 			//console.log(data.list[0].seq);
 			//console.log(data.list[1].name);
 			
-			$.each(data.list, function(index, items){
+			$.each(data.list, function(index, items){ //for문. data.list가 items로 들어감. 
 				console.log(index + ', seq=' + items.seq + ', name=' + items.name);
 				
-				$('<tr/>').append($('<td/>',{
+				$('<tr/>').append($('<td/>',{ //.append는 뒤에 있는 애가 앞에 있는 애 자식으로 들러붙는거다.
 					align: 'center',
 					text: items.seq
 				})).append($('<td/>',{
-					text: items.subject
-				})).append($('<td/>',{
+					
+					}).append($('<a/>',{
+						href: '#', 
+						class: 'subjectA',
+						text: items.subject
+					}))
+				
+				).append($('<td/>',{
 					align: 'center',
 					text: items.id
 				})).append($('<td/>',{
 					align: 'center',
-					text: items.logtime
+					text: items.hit
 				})).append($('<td/>',{
 					align: 'center',
-					text: items.hit
-				})).appendTo($('#boardListTable'))
+					text: items.logtime
+				})).appendTo($('#boardListTable')) //appendTo는 append랑 방향 바귐. tr태그들이 boardListTable에 아래로 들어간다는 뜻. 
 			});
 			
+			//페이징 처리
+			$('#boardPagingDiv').html(data.pagingHTML);
 		},
 		error: function(err){
 			console.log(err);

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+* { 
+   padding: 0;
+   margin: 0; 
+}
+
+#container { 
+   width: 500px;
+   margin: 20px auto; /* 가운데 정렬 */
+}
+
+ul.tab {
+   list-style: none;
+   position: relative;
+   z-index: 100; /* 우선 순위 앞으로 */
+}
+
+ul.tab li {
+   width: 100px;
+   height: 40px;
+   float: left;
+}
+
+ul:after {
+   content: '';
+   display: block;
+   float: none;
+   clear: both;
+}
+
+ul.tab li a {
+   background: url("../image/tab.jpg");
+   display: block;
+   color: #222;
+   line-height: 40px;
+   text-align: center;
+   text-decoration: none;
+}
+
+ul.tab li a.selected {
+   background: url("../image/tab_selected.jpg");
+}
+
+p.panel {
+   border: 1px solid #9FB7D4;
+   position: relative;
+   padding: 10px;
+   margin: 0;
+   top: -1px; /* 선택했다는 걸 보여주려는 효과로 테이블의 밑변 안보이게 해주려구. -1로 위로 올려버린 것이다. */
+}
+</style>
+</head>
+<body>
+<div id="container">
+	<!-- 탭 버튼 영역 -->
+	<ul class="tab">
+		<li><a href="../txt/html5.txt" class="selected">HTML5</a></li> <!-- addClass, removeClass 사용하겠다. -->
+		<li><a href="../txt/jquery.txt">jQuery</a></li>
+		<li><a href="../txt/bootstrap.txt">Bootstrap3</a></li>
+	</ul>
+	<!-- 내용 영역 -->
+	<p class="panel"></p>
+</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	//실행하자마자 class="selected" 부여된 파일의 내용을 읽어오기 ==> load() 사용하면 됨.
+	console.log($('a.selected').attr('href')); //해당하는 요소의 href 값을 가져와라.
+	$('p.panel').load($('a.selected').attr('href'));
+	
+	$('ul.tab li a').click(function(){
+		console.log('this = ' + this);
+		console.log('$(this) = ' + $(this));
+		
+		//클릭한 요소를 뺀 나머지에서 class="selected" 클래스 속성 제거 
+		$('ul.tab li a').not(this).removeClass('selected'); //클릭한 요소 나, this를 제외한 나머지 a태그에서 클래스 속성 제거.
+		
+		//클릭한 요소에 class="selected" 클래스 속성 추가 
+		$(this).addClass('selected');
+		
+		//클릭한 요소의 href 속성값 가져와서 속성값(파일)을 읽어낸다.
+		$('p.panel').load($(this).attr('href'));
+		
+		//페이지 이동 방지 
+		return false;
+	});
+});
+</script>
+
+</body>
+</html>
+
+<!-- 
+.not()
+- 제이쿼리로 선택한 선택자(요소)들 중에서, 특정 선택자(요소)만을 제외하는 함수
+
+this / $(this)
+this의 경우 해당 이벤트가 발생한 요소를 표시해주고
+$(this)는 이벤트가 발생하면 발생한 태그를 Object 형태로 감싸서 보여준다는게 다른점이다.
+
+this와 같은 데이터를 갖기 위해서는 $(this)[0] 을 사용하면 된다.
+this  === $(this)[0]
+ -->

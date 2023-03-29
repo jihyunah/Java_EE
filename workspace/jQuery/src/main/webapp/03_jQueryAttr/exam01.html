@@ -17,12 +17,13 @@ $(function(){
 	console.log(); 
 	
 	var check = $('#check'); //아이디가 check인 태그를 가져와라.
-	console.log('check = ' + check.tagName);
+	console.log('check = ' + check); //오브젝트로 빠짐 [object Object]
+	console.log('check = ' + check.prop('tagName'));
 	console.log('attr = ' + check.attr('checked')); //있는 그대로의 글자 checked를 가져옴. 
 	console.log('prop = ' + check.prop('checked')); //실제 true.
 	
 	var check2 = document.querySelector('#check'); //아이디가 check인 태그를 가져와라 
-	console.log('attr = ' + check2.getAttribute(checked));
+	console.log('attr = ' + check2.getAttribute('checked'));
 	
 	/*
 	.hasAttribute(name) —> 속성의 존재 확인
