@@ -4276,3 +4276,6 @@ java.lang.Error: SWT Resource was not properly disposed
 
 !ENTRY org.eclipse.lsp4e 1 0 2023-03-28 17:32:13.000
 !MESSAGE [Info]	ESLint server running in node v18.12.1
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-03-28 17:48:25.714
+!MESSAGE [Info]	ESLint server running in node v18.12.1
