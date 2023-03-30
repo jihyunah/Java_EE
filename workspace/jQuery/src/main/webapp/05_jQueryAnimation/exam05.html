@@ -55,8 +55,8 @@ $(function(){
 		
 	//좌측으로부터 250px 이동하고, 높이와 너비를 150px으로 하기
 	$('button:eq(2)').click(function(){
-		//
-		//
+		// JSON 형식의 CSS 속성을 여러 개 나열할 수 있으며,
+		// CSS 속성을 제외한 나머지 파라미터들은 생략 가능하다. 
 		
 		$('#box').animate({
 			'left': '250px',
@@ -65,10 +65,28 @@ $(function(){
 		});
 	});
 	
+	//좌측으로부터 50px 이동하고, 높이와 너비를 50px씩 크게 하기
+	$('button:eq(3)').click(function(){
+		//단항연산자를 사용하여 기존의 값에서 점점 누적되는 형태로 변경이 가능하다. 
+		
+		$('#box').animate({
+			'left': '+=50px',
+			'width': '+=50px',
+			'height': '+=50px',
+		}, 300); //0.3초 동안. 
+	});
 	
-	$('button:eq(3)').click(function(){});
-	
-	$('button:eq(4)').click(function(){});
+	//애니메이션의 연속적 호출
+	$('button:eq(4)').click(function(){
+		var div = $('#box');
+		
+		//애니메이션을 연속적으로 사용하면,
+		//여러 개의 장면이 순차적으로 실행된다. 
+		div.animate({ height: '300px' }, 1000);
+		div.animate({ width: '300px' }, 500);
+		div.animate({ height: '100px' }, 800);
+		div.animate({ width: '100px' }, 300);
+	});
 });
 </script>
 
