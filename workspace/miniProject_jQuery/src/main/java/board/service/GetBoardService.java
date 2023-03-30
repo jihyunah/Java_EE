@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.json.simple.JSONObject;
 
@@ -41,6 +42,10 @@ public class GetBoardService implements CommandProcess {
         json.put("hit", boardDTO.getHit());
         json.put("logtime", sdf.format(boardDTO.getLogtime()));
 		
+        //세션 
+        HttpSession session = request.getSession();
+        String memId = (String) session.getAttribute("memId");
+        
 		// 응답 
 		request.setAttribute("seq", seq);
 		request.setAttribute("json", json);

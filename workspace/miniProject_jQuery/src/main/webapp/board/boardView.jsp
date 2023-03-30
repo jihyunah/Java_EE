@@ -50,9 +50,9 @@
       <input type="button" value="목록" 
       onclick="location.href='/miniProject_jQuery/board/boardList.do?pg=${pg}'">
       
-      <span>
-         <input type="button" value="글수정">
-         <input type="button" value="글삭제">
+      <span id="viewBtn">
+         <!-- <input type="button" value="글수정">
+         <input type="button" value="글삭제"> -->
       </span>
 </form>
 

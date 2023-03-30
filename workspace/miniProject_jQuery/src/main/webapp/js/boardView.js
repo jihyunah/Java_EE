@@ -15,7 +15,15 @@ $(document).ready(function(){
 			$('#contentSpan').text(data.content);
 			
 			
-			
+			//로그인한 사람과 작성자가 같을 
+			if($('#memId').val() == data.id){
+				$('#viewBtn').append($('<input/>', {
+					value: '글수정'
+				})).append($('<input/>',{
+					value: '글삭제'
+				})).appendTo($('#boardViewForm'))
+			}
+				
 			
 		},
 		error: function(err){
