@@ -19,7 +19,6 @@ INDEX VERSION 1.4+/Applications/study/java_ee/workspace/.metadata/.plugins/org.e
 2710502467.index
 1590642288.index
 2983320444.index
-1852859981.index
 1587158974.index
 2084425731.index
 1201711212.index

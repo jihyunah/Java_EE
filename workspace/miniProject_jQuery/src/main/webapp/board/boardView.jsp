@@ -18,8 +18,9 @@
 </head>
 <body>
    <form id="boardViewForm" method="post">
-      <input type="text" id="seq" value="${requestScope.seq}">
-      <input type="text" id="seq" value="${requestScope.pg}">
+      <input type="text" id="seq" name="seq" value="${requestScope.seq}">
+      <input type="text" id="pg" name="pg" value="${requestScope.pg}">
+      <input type="text" id="memId" name="memId" value="${memId}">
       <h3>
          작성한 글확인
       </h3>
@@ -50,10 +51,12 @@
       <input type="button" value="목록" 
       onclick="location.href='/miniProject_jQuery/board/boardList.do?pg=${pg}'">
       
-      <span id="viewBtn">
-         <!-- <input type="button" value="글수정">
-         <input type="button" value="글삭제"> -->
+      <span id="boardViewSpan">
+         <input type="button" value="글수정" id="boardUpdateFormBtn">
+         <input type="button" value="글삭제" id="boardDeleteBtn"> 
       </span>
+      
+      <input type="button" value="답글" id="boardReplyFormBtn">
 </form>
 
 <script type="text/javascript" src="../js/jquery-3.6.4.min.js"></script>

@@ -49,6 +49,7 @@ public class GetBoardService implements CommandProcess {
 		// 응답 
 		request.setAttribute("seq", seq);
 		request.setAttribute("json", json);
+		request.setAttribute("memId", memId);
 		return "/board/getBoard.jsp";
 	}
 
