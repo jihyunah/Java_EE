@@ -1,5 +1,7 @@
 package board.service;
 
+import java.text.SimpleDateFormat;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -15,24 +17,31 @@ public class GetBoardService implements CommandProcess {
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) {
 		// 데이터 
-		int pg = Integer.parseInt(request.getParameter("pg"));
 		int seq = Integer.parseInt(request.getParameter("seq"));
 		
 		// DB
 		BoardDAO boardDAO = BoardDAO.getInstance();
-		
 		BoardDTO boardDTO = boardDAO.getBoard(seq);
 		
-		JSONObject json = new JSONObject();
+		//BoardDTO ==> JSON 변환 
+		JSONObject json = new JSONObject(); //json 객체 잡기 {     } 
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd");
 		
-		json.put("subject", boardDTO.getSubject());
 		json.put("seq", boardDTO.getSeq());
 		json.put("id", boardDTO.getId());
-		json.put("hit", boardDTO.getHit());
-		json.put("content", boardDTO.getContent());
+		json.put("name", boardDTO.getName());
+		json.put("email", boardDTO.getEmail());
+        json.put("subject", boardDTO.getSubject());
+        json.put("content", boardDTO.getContent());
+        json.put("ref", boardDTO.getRef());
+        json.put("lev", boardDTO.getLev());
+        json.put("step", boardDTO.getStep());
+        json.put("pseq", boardDTO.getPseq());
+        json.put("reply", boardDTO.getReply());
+        json.put("hit", boardDTO.getHit());
+        json.put("logtime", sdf.format(boardDTO.getLogtime()));
 		
 		// 응답 
-		request.setAttribute("pg", pg);
 		request.setAttribute("seq", seq);
 		request.setAttribute("json", json);
 		return "/board/getBoard.jsp";

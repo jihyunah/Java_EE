@@ -16,13 +16,13 @@ public class BoardViewService implements CommandProcess {
 		int seq = Integer.parseInt(request.getParameter("seq"));
 		int pg = Integer.parseInt(request.getParameter("pg"));
 		
-		//DB
-		BoardDAO boardDAO = BoardDAO.getInstance();
-		BoardDTO boardDTO = boardDAO.getBoard(seq);
+		//동적처리 할 것이기 때문에 DB 안가도 된다. 
+//		BoardDAO boardDAO = BoardDAO.getInstance();
+//		BoardDTO boardDTO = boardDAO.getBoard(seq);
 		
 		
 		//응답 
-		request.setAttribute("seq", seq);
+		request.setAttribute("seq", seq); //boardList.js에서 받은걸 boardView로 넘겨주기 위해. 
 		request.setAttribute("pg", pg);
 		request.setAttribute("display", "/board/boardView.jsp");
 		

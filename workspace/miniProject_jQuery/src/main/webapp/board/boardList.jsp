@@ -28,10 +28,10 @@
 	cursor: pointer;
 }
 #boardListTable th {
-	font-size: 12pt;
+	font-size: 15pt;
 }
 #boardListTable td {
-	font-size: 10pt;
+	font-size: 13pt;
 }
 
 </style>
