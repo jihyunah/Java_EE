@@ -58,7 +58,8 @@ $(function(){
 		// JSON 형식의 CSS 속성을 여러 개 나열할 수 있으며,
 		// CSS 속성을 제외한 나머지 파라미터들은 생략 가능하다. 
 		
-		$('#box').animate({
+		$('div').animate({ //첫번째 div는 position: static;(default) 이므로 빨강 div는 left가 무시됐다.
+		//$('#box').animate({ //빨강 div는 아무 변화가 없다. 
 			'left': '250px',
 			'width': '150px',
 			'height': '150px',
@@ -69,7 +70,8 @@ $(function(){
 	$('button:eq(3)').click(function(){
 		//단항연산자를 사용하여 기존의 값에서 점점 누적되는 형태로 변경이 가능하다. 
 		
-		$('#box').animate({
+		$('div').animate({
+		//$('#box').animate({ 
 			'left': '+=50px',
 			'width': '+=50px',
 			'height': '+=50px',
