@@ -81,7 +81,23 @@ public class BoardDAO {
 
    
    public BoardDTO boardReply(Map<String, String> map) {
-	   // TODO Auto-generated method stub
+	   SqlSession sqlSession = sqlSessionFactory.openSession();
+	   
+	   //원글
+	   BoardDTO boardDTO = sqlSession.selectOne("boardSQL.getBoard", map.get("pseq")); //원글번호 꺼내온다.
+	   
+	   
+	   // step update
+	   //update board set step=step+1 where ref=원글ref and step>원글step
+	   sqlSession.update("boardSQL.boardReply1", boardDTO);
+	   
+	   //insert
+	   //답글ref = 원글ref
+	   //답글lev = 원글lev + 1
+	   //답글step = 원글step + 1
+	   
+	   //reply update
+	   //update board set reply=reply+1 where seq=원글번호
 	   return null;
 }
 	   

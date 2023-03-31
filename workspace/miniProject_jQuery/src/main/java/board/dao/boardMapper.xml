@@ -12,7 +12,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		, #{email}
 		, #{subject}
 		, #{content}
-		, seq_board.currval)
+		, seq_board.currval) <!-- 그룹 번호 = seq(글번호) -->
 	</insert>
 	
 	<!-- 목록  -->
