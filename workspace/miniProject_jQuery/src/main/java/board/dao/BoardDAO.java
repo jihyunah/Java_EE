@@ -78,5 +78,11 @@ public class BoardDAO {
 	   sqlSession.close();
 	   return boardDTO;
    }
+
+   
+   public BoardDTO boardReply(Map<String, String> map) {
+	   // TODO Auto-generated method stub
+	   return null;
+}
 	   
 } 

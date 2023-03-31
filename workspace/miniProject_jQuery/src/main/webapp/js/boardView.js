@@ -35,3 +35,33 @@ $('#boardUpdateFormBtn').click(function(){
 	$('#boardViewForm').attr('action', '/miniProject_jQuery/board/boardUpdateForm.do');
 	$('#boardViewForm').submit(); //input 상자의 내용들 다 가져갈 수 있음. submit은 id속성을 못가져 가고 name 속성만 가능. 
 });
+
+//답글 쓰기 폼
+$('#boardReplyFormBtn').click(function(){
+	$('#boardViewForm').attr('action', '/miniProject_jQuery/board/boardReplyForm.do');
+	$('#boardViewForm').submit(); //name 속성이 있는 seq, pg 데이터가 넘어간다. (name 속성 없는 memId는 못간다.)
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
