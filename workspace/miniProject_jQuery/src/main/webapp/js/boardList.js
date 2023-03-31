@@ -21,7 +21,7 @@ $(document).ready(function(){
 					
 					}).append($('<a/>',{
 						href: '#', 
-						class: 'subjectA',
+						class: 'subjectA subjectA_' + items.seq,
 						text: items.subject
 					}))
 				
@@ -35,7 +35,18 @@ $(document).ready(function(){
 					align: 'center',
 					text: items.logtime
 				})).appendTo($('#boardListTable')) //appendTo는 append랑 방향 바귐. tr태그들이 boardListTable에 아래로 들어간다는 뜻. 
-			});
+			
+				//답글 
+				for(var i=1; i<=items.lev; i++){
+					$('.subjectA_'+items.seq).before('&emsp;')
+				}
+				if(items.pseq != 0){//0이 아닌거니까 답글을 말함 
+					$('.subjectA_'+items.seq).before($('<img/>', {
+						'src' : '/miniProject_jQuery/image/reply.gif'
+					})) //앞에 붙여라. 
+				}
+			
+			}); //each
 			
 			//페이징 처리
 			$('#boardPagingDiv').html(data.pagingHTML);
@@ -56,6 +67,7 @@ $(document).ready(function(){
 					location.href='/miniProject_jQuery/board/boardView.do?seq=' + seq + '&pg='+ pg;
 				}
 			});
+			
 		},
 		error: function(err){
 			console.log(err);
