@@ -9,7 +9,7 @@
 <body>
 <h1 class="title">$.ajax() 함수를 사용한 XML 데이터 읽기 (1)</h1>
 <div class="exec">
-	<input type="button" value="txt파일 가져오기" id="mybtn" />
+	<input type="button" value="XML 데이터 가져오기" id="mybtn" />
 </div>
 <div class="console" id="result"></div>
 
@@ -17,7 +17,32 @@
 <script type="text/javascript">
 $(function(){
 	$('#mybtn').click(function(){
-		
+		$.ajax({
+			type: 'get',
+			url: '../xml/xml01.xml',
+			dataType: 'xml', //서버로부터 받는 데이터 타입
+			success: function(data){
+				console.log(data);
+				console.log($(data));
+				
+				var title = $(data).find('title').text();
+				var time = $(data).find('time').text();
+				var teacher = $(data).find('teacher').text();
+				
+				var div = $('<div/>'); //div값에 div태그를 만들어준다. 
+				var p1 = $('<p/>').html(title); //p태그를 만들고, <p>Javascript+jQuery+Ajax</p>
+				var p2 = $('<p/>').html(time);
+				var p3 = $('<p/>').html(teacher);
+				
+				//메소드 체인 (메소드를 연결 연결 시켰다는 뜻 )
+				div.append(p1).append(p2).append(p3);
+				
+				$('#result').append(div);
+			},
+			error: function(err){
+				alert(err);
+			}
+		});
 	});
 });
 </script>
