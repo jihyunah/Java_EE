@@ -30,6 +30,14 @@ $(function(){
 		$.get('../checkId/checkId.jsp', // $.ajax 대신 get 쓴 것임.
 				{'user_id': user_id},
 				function(data){
+					var result_text = $(data).find('result').text();
+					
+					var result = eval(result_text); //"true" => 실제 true로 변경해야함. 문자열=> boolean변환 
+					if(result){
+						$('.console').html('<span style="color: red;">사용할 수 없는 아이디 입니다.</span>');
+					}else {
+						$('.console').html('<span style="color: blue;">사용할 수 있는 아이디 입니다.</span>');
+					}
 					
 				}); 
 		
