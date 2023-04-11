@@ -13,29 +13,39 @@
 </head>
 <body>
 	
-	<section>
+	 <section>
 		<article>
 			<img src="/youtube_test/image/profile.png">
 			<div class="content-info">
-				<p id="subject">게시글 제목</p>
+				<p class="subject">글 게시자<span>작성일</span></p>
 				<p>게시글 내용입니다.</p>
-				<p>작성자: 사용자이름 | 작성일: 2023-04-10</p>
+				<p><img src="../image/jh.jpeg" class="image"></p>
+				<p>
+					<a href="#">
+						<img src="../image/" class="like">
+					</a>
+				</p>
 			</div>
 		</article>
 		<article>
-			<h2>게시글 제목</h2>
-			<p>게시글 내용입니다.</p>
-			<p>작성자: 사용자이름 | 작성일: 2023-04-10</p>
+			<img src="/youtube_test/image/profile.png">
+			<div class="content-info">
+				<p class="subject">글 게시자<span>작성일</span></p>
+				<p>게시글 내용입니다.</p>
+				<p><img src="../image/jh.jpeg" class="image"></p>
+			</div>
 		</article>
-		<form>
+		<!-- <form>
 			<h2>게시글 작성</h2>
 			<label for="title">제목</label>
 			<input type="text" id="title" name="title" placeholder="제목을 입력하세요">
 			<label for="content">내용</label>
 			<textarea id="content" name="content" rows="10" placeholder="내용을 입력하세요"></textarea>
 			<input type="submit" value="작성">
-		</form>
+		</form> -->
 	</section>
+	
+	
 </body>
 </html>
 		

@@ -11,7 +11,8 @@ img {
 }
 
 section {
-	margin: 60px 500px 60px 200px;
+	margin: 60px 300px 60px 200px;
+	
 }
 
 article {
@@ -19,9 +20,47 @@ article {
 	padding: 20px;
 	margin-bottom: 20px;
 	border-radius: 10px;
-	width: 70%;
-	height: 800px;
+	display: flex;
+	max-width: 100%; /* 최대 너비를 100%로 설정하여 부모 요소에 맞게 조절 */
+ 	overflow: hidden; /* 내용이 넘칠 경우 가려진 부분을 숨김 */
 }
+
+article img {
+	width: 45px;
+	height: 45px;
+	margin-right: 10px;
+	border-radius: 50%;
+}
+
+.image {
+	width: 100%; /* 이미지의 너비를 100%로 설정하여 부모 요소에 맞게 조절 */
+ 	height: auto; /* 이미지의 높이를 자동으로 조절하여 가로 세로 비율 유지 */
+ 	object-fit: cover; /* 이미지의 가로 세로 비율을 유지하면서, 부모 요소에 꽉 채움 */
+	margin-right: 50px;
+	border-radius: 10px;
+}
+.content-info {
+	font-size: 12px;
+}
+
+.content-info p {
+	color: #000;
+	font-weight: 600;
+	display: flex;
+	margin-bottom: 3px;
+	font-size: 17px;
+}
+
+.content-info span {
+	color: #000;
+	font-weight: 400;
+	display: flex;
+	margin-top: 2px;
+	margin-left: 7px;
+	font-size: 12px;
+}
+
+
 h1 {
 	font-size: 28px;
 	margin: 0;
@@ -32,7 +71,7 @@ h2 {
 	margin: 0;
 }
 
-#subject {
+.subject {
 	font-size: 15px;
 }
 
