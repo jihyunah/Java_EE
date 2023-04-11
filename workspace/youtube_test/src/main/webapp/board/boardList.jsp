@@ -6,86 +6,21 @@
 
 
 <!DOCTYPE html>
-
 <html>
 <head>
-	<title>커뮤니티 게시판</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-		}
-		
-		section {
-			margin: 60px 500px 60px 200px;
-		}
-		article {
-			border: 1px solid #333333;
-			padding: 20px;
-			margin-bottom: 20px;
-			border-radius: 10px;
-			width: 70%;
-			height: 800px;
-		}
-		h1 {
-			font-size: 28px;
-			margin: 0;
-		}
-		h2 {
-			font-size: 24px;
-			margin: 0;
-		}
-		#subject {
-			font-size: 15px;
-		}
-		p {
-			font-size: 18px;
-			line-height: 1.5;
-			margin: 0 0 10px 0;
-		}
-		form {
-			margin-top: 20px;
-		}
-		label {
-			display: block;
-			margin-bottom: 5px;
-		}
-		input[type="text"], textarea {
-			width: 100%;
-			padding: 10px;
-			margin-bottom: 10px;
-			box-sizing: border-box;
-			border: 1px solid #333333;
-			border-radius: 5px;
-			resize: none;
-		}
-		input[type="submit"] {
-			background-color: #333333;
-			color: #FFFFFF;
-			border: none;
-			padding: 10px 20px;
-			cursor: pointer;
-			border-radius: 5px;
-		}
-		input[type="submit"]:hover {
-			background-color: #FFFFFF;
-			color: #333333;
-		}
-	</style>
+<title>커뮤니티 게시판</title>
+<link rel="stylesheet" href="/youtube_test/css/board.css">
 </head>
 <body>
 	
 	<section>
 		<article>
-			<p id="subject">
-				<img src="/youtube_test/image/profile.png" width="35" height="35"
-					onclick="" style="cursor: pointer">게시글 제목
-			</p>
-			<p>게시글 내용입니다.</p>
-			<p>작성자: 사용자이름 | 작성일: 2023-04-10</p>
+			<img src="/youtube_test/image/profile.png">
+			<div class="content-info">
+				<p id="subject">게시글 제목</p>
+				<p>게시글 내용입니다.</p>
+				<p>작성자: 사용자이름 | 작성일: 2023-04-10</p>
+			</div>
 		</article>
 		<article>
 			<h2>게시글 제목</h2>
