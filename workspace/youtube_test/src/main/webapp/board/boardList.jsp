@@ -22,8 +22,8 @@
 				<p><img src="../image/jh.jpeg" class="image"></p>
 				<p>
 					<a href="#">
-						<img src="../image/" class="like">
-					</a>
+						<img src="/youtube_test/image/like.png" class="exBtn">
+					</a><span id="likesu">605</span>
 				</p>
 			</div>
 		</article>
