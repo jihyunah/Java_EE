@@ -14,13 +14,13 @@
 <body>
 	
 	 <section>
-		<article>
-			<a href="#"><img src="/youtube_test/image/profile.png" class="profile-img"></a>
+		<article class="article">
+			<a href="#"><img src="/youtube_test/image/jhhat.jpeg" class="profile-img"></a>
 			<a href="#"><img src="/youtube_test/image/show-more.png" class="show-more-img"></a>
 			<div class="content-info">
 				<p class="subject">글 게시자<span>작성일</span></p>
 				<p class="content">게시글 내용입니다.</p>
-				<p><img src="../image/icon-1.jpg" class="image"></p>
+				<p><img src="../image/jhhat.jpeg" class="image"></p>
 				<p>
 					<a href="#">
 						<img src="/youtube_test/image/like.png" id="likeBtn">
@@ -41,7 +41,8 @@
 			</div>
 		</article>
 		<article>
-			<a href="#"><img src="/youtube_test/image/profile.png" class="profile-img"></a>
+			<a href="#"><img src="/youtube_test/image/jhhat.jpeg" class="profile-img"></a>
+			<a href="#"><img src="/youtube_test/image/show-more.png" class="show-more-img"></a>
 			<div class="content-info">
 				<p class="subject">글 게시자<span>작성일</span></p>
 				<p class="content">게시글 내용입니다.안녕하세요
@@ -73,7 +74,8 @@
 			</div>
 		</article>
 		<article>
-			<a href="#"><img src="/youtube_test/image/profile.png" class="profile-img"></a>
+			<a href="#"><img src="/youtube_test/image/jhhat.jpeg" class="profile-img"></a>
+			<a href="#"><img src="/youtube_test/image/show-more.png" class="show-more-img"></a>
 			<div class="content-info">
 				<p class="subject">글 게시자<span>작성일</span></p>
 				<p class="content">게시글 내용입니다.</p>
@@ -98,7 +100,8 @@
 			</div>
 		</article>
 		<article>
-			<a href="#"><img src="/youtube_test/image/profile.png" class="profile-img"></a>
+			<a href="#"><img src="/youtube_test/image/jhhat.jpeg" class="profile-img"></a>
+			<a href="#"><img src="/youtube_test/image/show-more.png" class="show-more-img"></a>
 			<div class="content-info">
 				<p class="subject">글 게시자<span>작성일</span></p>
 				<p class="content">제 채널에 놀러와 주셔서 감사드려요. 
@@ -125,7 +128,8 @@
 			</div>
 		</article>
 		<article>
-			<a href="#"><img src="/youtube_test/image/profile.png" class="profile-img"></a>
+			<a href="#"><img src="/youtube_test/image/jhhat.jpeg" class="profile-img"></a>
+			<a href="#"><img src="/youtube_test/image/show-more.png" class="show-more-img"></a>
 			<div class="content-info">
 				<p class="subject">글 게시자<span>작성일</span></p>
 				<p class="content">게시글 내용입니다.</p>
@@ -161,12 +165,7 @@
 	
 	
 </body>
-<script type="text/javascript">
-#likeBtnTooltip {
-opacity: 1;
-visibility: visible;
-} 
-
-</script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.6.4.min.js"></script>
+<!-- <script type="text/javascript" src="../js/boardList.js"></script> -->
 </html>
 		

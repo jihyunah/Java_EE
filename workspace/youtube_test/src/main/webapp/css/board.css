@@ -26,7 +26,10 @@ article {
 	display: flex;
 	max-width: 100%; /* 최대 너비를 100%로 설정하여 부모 요소에 맞게 조절 */
  	overflow: hidden; /* 내용이 넘칠 경우 가려진 부분을 숨김 */
+ 	position: relative;
 }
+
+
 
 
 .profile-img {
@@ -37,10 +40,23 @@ article {
 }
 
 .show-more-img {
- 	width: 20px;
-	height: 20px;
-	margin-left: 500px;
+	display: none;
+	width: 30px;
+	height: 30px;
+ 	position: absolute;
+ 	top: 10px;
+ 	right: 15px;
 }
+
+.article:hover .show-more-img {
+	display: block;
+	width: 30px;
+	height: 30px;
+	top: 15px;
+ 	right: 30px;
+}
+
+
 
 .image {
 	width: 80%; /* 이미지의 너비를 100%로 설정하여 부모 요소에 맞게 조절 */
@@ -69,7 +85,7 @@ article {
 	margin-left: 7px;
 	font-size: 12px;
 }
-.content-info span:hover {
+.content-info .subject span:hover {
 	color: #000;
 	font-weight: 400;
 	display: flex;
@@ -190,8 +206,9 @@ article {
 #dislikeBtn:hover {
 	width: 30px;
 	height: 30px;
+	margin-left: 10px;
 	margin-right: 50px;
-	margin-top: 5px;
+	margin-top: 10px;
 	margin-bottom: 5px;
 	display: flex;
 	background-color: lightgray;
@@ -201,11 +218,11 @@ article {
 	
 }
 #shareBtn {
-	width: 35px;
-	height: 35px;
+	width: 30px;
+	height: 30px;
 	margin-left: -20px;
 	margin-right: 50px;
-	margin-top: 4px;
+	margin-top: 6px;
 	margin-bottom: 5px;
 	display: flex;
 	
@@ -214,8 +231,9 @@ article {
 #shareBtn:hover {
 	width: 30px;
 	height: 30px;
+	margin-left: -20px;
 	margin-right: 50px;
-	margin-top: 5px;
+	margin-top: 6px;
 	margin-bottom: 5px;
 	display: flex;
 	background-color: lightgray;
@@ -228,20 +246,21 @@ article {
 #dapBtn {
 	width: 20px;
 	height: 20px;
-	margin-left: -20px;
+	margin-left: -10px;
 	margin-right: 50px;
 	margin-top: 13px;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	display: flex;
 	
 }
 
 #dapBtn:hover {
-	width: 30px;
-	height: 30px;
+	width: 20px;
+	height: 20px;
+	margin-left: -10px;
 	margin-right: 50px;
-	margin-top: 5px;
-	margin-bottom: 5px;
+	margin-top: 13px;
+	margin-bottom: 10px;
 	display: flex;
 	background-color: lightgray;
 	border-radius: 50%;
