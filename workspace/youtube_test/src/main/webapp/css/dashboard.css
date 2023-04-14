@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+ytcp-entity-page[first-load] #main.ytcp-entity-page {
+	opacity: 0;
+}
+
+#main.ytcp-entity-page {
+	overflow: auto;
+	display: flex;
+	flex: 1;
+	position: relative;
+}
+
+ytcp-app {
+	--yt-menu-item-icon-display: inline-block;
+}
+
+ytcd-item {
+	display: flex;
+	flex-direction: column;
+}
+
+
+ytcd-card {
+	font-family: "Roboto", "Noto", sans-serif;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+ytcd-channel-dashboard {
+	--card-margin: 24px;
+	color: black;
+}
+
+ytcp-entity-page{
+	--collapsed-nav-width: 72px;
+	--top-banner-expand-transition: 417ms var(--incoming-curve);
+}
